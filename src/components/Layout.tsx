@@ -1,12 +1,16 @@
-import { Link, NavLink, Outlet } from 'react-router-dom'
-import { siteNav, CONTACT } from '../data/site'
+import { Link, NavLink, Outlet } from "react-router-dom";
+import { siteNav, CONTACT } from "../data/site";
 
-function Brand({ height = '40px' }: { height?: string }) {
+function Brand({ height = "40px" }: { height?: string }) {
   return (
     <Link to="/" className="brand" aria-label="DACTION Initiative home">
-      <img src="/assets/logo.svg" alt="DACTION Initiative logo" style={{ height }} />
+      <img
+        src="/assets/logo.svg"
+        alt="DACTION Initiative logo"
+        style={{ height }}
+      />
     </Link>
-  )
+  );
 }
 
 function SiteHeader() {
@@ -16,14 +20,14 @@ function SiteHeader() {
         <Brand />
         <nav className="primary" aria-label="Primary">
           {siteNav.map((item) => (
-            <NavLink key={item.to} to={item.to} end={item.to === '/'}>
+            <NavLink key={item.to} to={item.to} end={item.to === "/"}>
               {item.label}
             </NavLink>
           ))}
         </nav>
       </div>
     </header>
-  )
+  );
 }
 
 function SiteFooter() {
@@ -64,7 +68,7 @@ function SiteFooter() {
         </div>
       </div>
     </footer>
-  )
+  );
 }
 
 export default function Layout() {
@@ -76,5 +80,5 @@ export default function Layout() {
       </main>
       <SiteFooter />
     </>
-  )
+  );
 }

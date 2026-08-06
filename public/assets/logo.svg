@@ -1,16 +1,29 @@
-<svg width="160" height="40" viewBox="0 0 160 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 240 240"
+    width="240"
+    height="240"
+>
   <defs>
-    <linearGradient id="dg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#39B6E0"/>
-      <stop offset="0.55" stop-color="#1E7FC2"/>
-      <stop offset="1" stop-color="#155A9C"/>
-    </linearGradient>
+    <clipPath id="d-clip">
+      <path d="M 70 40 L 120 40 A 80 80 0 0 1 120 200 L 70 200 Z" />
+    </clipPath>
   </defs>
-  <rect x="2" y="2" width="36" height="36" rx="10" fill="url(#dg)"/>
-  <path d="M11 27c0-8 5.2-13.4 12.8-14.9-1.2 7.4-4.7 12.9-12.8 14.9z" fill="#fff" opacity="0.95"/>
-  <path d="M11 27c1.4-5.8 5.2-9.6 10.9-11.2-6.1 3.8-9.7 6.5-10.9 11.2z" fill="#F6F3EC"/>
-  <path d="M20 12.1V27" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/>
-  <circle cx="13.5" cy="29" r="1.8" fill="#EE9636"/>
-  <text x="50" y="27" font-family="Georgia, serif" font-size="22" font-weight="600" fill="#122A4A" letter-spacing="0.5">DACTION</text>
-  <text x="51.5" y="36.5" font-family="Arial, sans-serif" font-size="8.5" font-weight="600" letter-spacing="2.6" fill="#155A9C">INITIATIVE</text>
+
+  <!-- Solid blue D: flat left, rounded right -->
+  <path fill="#1B5FC1" d="M 70 40 L 120 40 A 80 80 0 0 1 120 200 L 70 200 Z" />
+
+  <!-- Three nested white chevrons, parallel, pointing right -->
+  <g
+        clip-path="url(#d-clip)"
+        fill="none"
+        stroke="#FFFFFF"
+        stroke-width="10"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+    >
+    <path d="M 62 70 L 170 120 L 62 170" />
+    <path d="M 62 90 L 130 120 L 62 150" />
+    <path d="M 62 110 L 90 120 L 62 130" />
+  </g>
 </svg>

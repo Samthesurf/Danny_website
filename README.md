@@ -37,7 +37,7 @@ src/
     site.ts             Programs, team, partners, gallery, timeline, stats, nav
   pages/                One component per route
 public/
-  assets/logo.svg       Brand mark (placeholder until real logo.png is provided)
+  assets/logo.svg       Temporary brand mark (replace when the final logo is provided)
 original_static/        The original plain-HTML site kept for reference
 ```
 
@@ -52,9 +52,8 @@ npm run preview    # serve the production build locally
 
 ## Notes
 
-- The real DACTION logo was not in the download. `public/assets/logo.svg` is a
-  generated placeholder mark; replace it with the real logo (header, footer, and
-  favicon all reference it).
+- `public/assets/logo.svg` is the current temporary DACTION mark. Replace it with
+  the final logo when available; the header, footer, and favicon all reference it.
 - Original site referenced per-program and per-team-member detail pages that were
   never built. Those now render as stub pages ("being written") instead of 404s,
   ready to be filled in via `src/data/site.ts` + the `ProgramStory`/`MemberBio`

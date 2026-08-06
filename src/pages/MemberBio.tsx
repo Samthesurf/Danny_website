@@ -25,30 +25,30 @@ export default function MemberBio() {
   }
 
   return (
-    <>
-      <section className="hero-simple">
-        <div className="wrap">
-          <span className="eyebrow">{member.role}</span>
-          <h1 style={{ maxWidth: '20ch' }}>{member.name}</h1>
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="wrap bio-grid">
-          <Placeholder variant="portrait" label="Photo coming soon" />
+    <section className="section--tight">
+      <div className="wrap">
+        <Link to="/team" style={{ fontSize: '0.9rem', fontWeight: 600 }}>
+          &larr; All team members
+        </Link>
+        <div className="bio-grid" style={{ marginTop: 24 }}>
           <div>
-            <span className="eyebrow">Bio</span>
-            <p>{member.blurb}</p>
-            <p style={{ maxWidth: '60ch' }}>
-              {member.name.split(' ')[0]}'s full bio is being written. In the meantime, you can
-              read about the work {member.name.split(' ')[0]} leads on the programs page.
-            </p>
+            <Placeholder variant="portrait" label="Photo coming soon" />
+          </div>
+          <div>
+            <h1 style={{ fontSize: '2rem' }}>{member.name}</h1>
+            <span className="eyebrow" style={{ marginTop: 2 }}>
+              {member.role}
+            </span>
+            {member.bio.map((paragraph, i) => (
+              <p key={i}>{paragraph}</p>
+            ))}
+            {member.note && <p style={{ fontStyle: 'italic', color: 'var(--ink-soft)' }}>{member.note}</p>}
             <Link to="/team" className="btn btn--ghost">
               Back to the team
             </Link>
           </div>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   )
 }
