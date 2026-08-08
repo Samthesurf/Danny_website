@@ -25,9 +25,14 @@ export default function Partners() {
 
           {partners.map((p) => (
             <div className="partner-row" key={p.name}>
-              <div>
-                <span className="p-name">{p.name}</span>
-                <p className="p-desc">{p.description}</p>
+              <div className="partner-row-main">
+                {p.logo ? (
+                  <img src={p.logo} alt={`${p.name} logo`} className="partner-logo" />
+                ) : null}
+                <div>
+                  <span className="p-name">{p.name}</span>
+                  <p className="p-desc">{p.description}</p>
+                </div>
               </div>
               <span className="p-role">{p.since}</span>
             </div>

@@ -7,6 +7,8 @@ export default function Gallery() {
     document.title = 'Gallery | DACTION Initiative'
   }, [])
 
+  // Campaigns with real photos are shown; upcoming events (no event photos yet)
+  // are noted below the grid.
   return (
     <>
       <section className="hero-simple">
@@ -14,8 +16,8 @@ export default function Gallery() {
           <span className="eyebrow">Gallery</span>
           <h1 style={{ maxWidth: '16ch' }}>Our work, in pictures.</h1>
           <p className="lede">
-            Photos from each campaign, organized below by program, most recent first. This gallery
-            is being filled in as photos are added.
+            Photos from each completed campaign, organized by program below. New photos are added
+            as each campaign is delivered.
           </p>
         </div>
       </section>
@@ -25,11 +27,25 @@ export default function Gallery() {
           {gallerySections.map((section) => (
             <div className="gallery-section" key={section.title}>
               <h2 style={{ fontSize: '1.4rem' }}>{section.title}</h2>
-              <div className="gallery-grid">
-                {Array.from({ length: section.count }).map((_, i) => (
-                  <Placeholder variant="square" key={`${section.title}-${i}`} />
-                ))}
-              </div>
+              {section.images && section.images.length > 0 ? (
+                <div className="gallery-grid">
+                  {section.images.map((src) => (
+                    <img
+                      key={src}
+                      src={src}
+                      alt={section.title}
+                      loading="lazy"
+                      className="gallery-img"
+                    />
+                  ))}
+                </div>
+              ) : (
+                <Placeholder
+                  variant="wide"
+                  label="Photos coming after the event"
+                  style={{ maxWidth: 560 }}
+                />
+              )}
             </div>
           ))}
         </div>

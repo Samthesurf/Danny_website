@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-import Placeholder from '../components/Placeholder'
 import { impactStats } from '../data/site'
 import { useEffect } from 'react'
 
@@ -29,7 +28,11 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <Placeholder variant="hero" label="Photo coming soon" />
+          <img
+            src="/assets/img/ocean-conservation/ocean-01.jpg"
+            alt="Students at an ocean conservation outreach session"
+            className="hero-img"
+          />
         </div>
       </section>
 
@@ -92,7 +95,12 @@ export default function Home() {
               Read more
             </Link>
           </div>
-          <Placeholder variant="card" label="Photo coming soon" style={{ marginBottom: 0 }} />
+          <div className="home-partner-logo">
+            <img
+              src="/assets/logos/abuadmun-partnership.png"
+              alt="DACTION x ABUADMUN partnership logo"
+            />
+          </div>
         </div>
       </section>
 

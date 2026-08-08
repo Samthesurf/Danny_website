@@ -25,6 +25,10 @@ export interface Program {
   statusLabel: string
   location: string
   focus: string
+  /** Hero/feature image for the program card and story page. */
+  image?: string
+  /** Optional campaign logo (e.g. Earth Summit, ABUADMUN). */
+  logo?: string
   storyHeadline: string
   story: string[]
   stats: ProgramStat[]
@@ -65,6 +69,7 @@ const programsBase: Program[] = [
     statusLabel: 'Upcoming, November 2026',
     location: 'Afe Babalola University, Ado-Ekiti',
     focus: 'Youth diplomacy & institutional partnership',
+    logo: '/assets/logos/abuadmun.png',
     storyHeadline: "Backing the first Model UN at Daniel's own university.",
     story: [
       'In his final undergraduate semester, Daniel worked with the administration at Afe Babalola University to secure formal approval for ABUADMUN, the university\u2019s first Model United Nations association. A Model UN simulates the structure and debate of the real United Nations, giving students practice in diplomacy, negotiation, public speaking, and policy writing.',
@@ -88,6 +93,7 @@ const programsBase: Program[] = [
     statusLabel: 'Upcoming, September 2026',
     location: 'Federal University of Technology Akure (FUTA), Ondo State',
     focus: 'Soil health, composting, sustainable food systems',
+    logo: '/assets/logos/earth-summit.png',
     storyHeadline: 'Turning everyday waste into a solution communities can use.',
     story: [
       'Across Akure, homes, markets, and university dining halls generate large volumes of organic waste every day, while nearby farming communities struggle with declining soil fertility from erosion and nutrient loss. The two problems are directly connected: waste that could restore soil is instead treated as trash.',
@@ -128,6 +134,7 @@ const programsBase: Program[] = [
     statusLabel: 'Completed, September 2025',
     location: 'Lekki, Lagos (hybrid, in person and online)',
     focus: 'Clean energy, hydrogen, career pathways',
+    image: '/assets/img/hydrogen-horizons/hydrogen-01.jpg',
     storyHeadline:
       'Where does a conventional engineering career fit in a cleaner energy future?',
     story: [
@@ -173,6 +180,7 @@ const programsBase: Program[] = [
     statusLabel: 'Completed, 2024',
     location: 'Lekki & Ajah, Lagos State',
     focus: 'Coastal cleanups, reforestation, artivism',
+    image: '/assets/img/youth-vs-climate-change/youth-01.jpg',
     storyHeadline: "Nigeria's beaches carry a problem most visitors walk past.",
     story: [
       "Lagos has some of Nigeria's most visited coastline, and also some of its most littered. Single-use plastic bottles, bags, wrappers, and cigarette butts collect freely on beaches with no real system for managing them, while most visitors and beach owners alike have little sense of the harm it causes.",
@@ -212,6 +220,7 @@ const programsBase: Program[] = [
     statusLabel: 'Completed, 2022',
     location: 'Akure, Ondo State',
     focus: 'Ocean conservation education, school recycling',
+    image: '/assets/img/ocean-conservation/ocean-01.jpg',
     storyHeadline: 'Nine out of ten schools had never had a recycling bin.',
     story: [
       "This was DACTION's first campaign, and its first real proof that a small, youth-led team could plan and deliver something real. Pre-campaign research found that most secondary schools in Ondo State had no history of recycling at all, and most of the wider public had little concern for ocean conservation to begin with.",
@@ -347,6 +356,7 @@ export interface Partner {
   name: string
   since: string
   description: string
+  logo?: string
 }
 
 export const partners: Partner[] = [
@@ -367,6 +377,7 @@ export const partners: Partner[] = [
     since: 'Since 2026',
     description:
       "The Afe Babalola University Model United Nations is DACTION's newest partner: a founding funding relationship backing the university's first Model UN conference with a multi-year commitment.",
+    logo: '/assets/logos/abuadmun.png',
   },
 ]
 
@@ -401,14 +412,58 @@ export const recognition: Recognition[] = [
 export interface GallerySection {
   title: string
   count: number
+  /** Optional array of image paths to display for this section. */
+  images?: string[]
 }
 
 export const gallerySections: GallerySection[] = [
-  { title: 'ABUADMUN Founding Partnership, 2026', count: 4 },
-  { title: 'DACTION Earth Summit, 2026', count: 8 },
-  { title: 'FIRE Meetup: Hydrogen Horizons, 2025', count: 8 },
-  { title: 'Youth vs. Climate Change, 2024', count: 8 },
-  { title: 'Ocean Conservation from the Classroom, 2022', count: 8 },
+  {
+    title: 'DACTION Earth Summit, 2026',
+    count: 0,
+    images: [],
+  },
+  {
+    title: 'FIRE Meetup: Hydrogen Horizons, 2025',
+    count: 8,
+    images: [
+      '/assets/img/hydrogen-horizons/hydrogen-01.jpg',
+      '/assets/img/hydrogen-horizons/hydrogen-02.jpg',
+      '/assets/img/hydrogen-horizons/hydrogen-03.jpg',
+      '/assets/img/hydrogen-horizons/hydrogen-04.jpg',
+      '/assets/img/hydrogen-horizons/hydrogen-05.jpg',
+      '/assets/img/hydrogen-horizons/hydrogen-06.jpg',
+      '/assets/img/hydrogen-horizons/hydrogen-07.jpg',
+      '/assets/img/hydrogen-horizons/hydrogen-08.jpg',
+    ],
+  },
+  {
+    title: 'Youth vs. Climate Change, 2024',
+    count: 8,
+    images: [
+      '/assets/img/youth-vs-climate-change/youth-01.jpg',
+      '/assets/img/youth-vs-climate-change/youth-02.jpg',
+      '/assets/img/youth-vs-climate-change/youth-03.jpg',
+      '/assets/img/youth-vs-climate-change/youth-04.jpg',
+      '/assets/img/youth-vs-climate-change/youth-05.jpg',
+      '/assets/img/youth-vs-climate-change/youth-06.jpg',
+      '/assets/img/youth-vs-climate-change/youth-07.jpg',
+      '/assets/img/youth-vs-climate-change/youth-08.jpg',
+    ],
+  },
+  {
+    title: 'Ocean Conservation from the Classroom, 2022',
+    count: 8,
+    images: [
+      '/assets/img/ocean-conservation/ocean-01.jpg',
+      '/assets/img/ocean-conservation/ocean-02.jpg',
+      '/assets/img/ocean-conservation/ocean-03.jpg',
+      '/assets/img/ocean-conservation/ocean-04.jpg',
+      '/assets/img/ocean-conservation/ocean-05.jpg',
+      '/assets/img/ocean-conservation/ocean-06.jpg',
+      '/assets/img/ocean-conservation/ocean-07.jpg',
+      '/assets/img/ocean-conservation/ocean-08.jpg',
+    ],
+  },
 ]
 
 export interface TimelineItem {

@@ -23,10 +23,18 @@ export default function Programs() {
 
       <section className="section--tight">
         <div className="wrap">
-          <div className="grid grid--3">
+          <div className="prog-grid">
             {programs.map((p) => (
               <div className="prog-card" id={p.id} key={p.slug}>
-                <Placeholder variant="card" label="Photo coming soon" />
+                {p.image ? (
+                  <img src={p.image} alt={p.title} className="prog-card-img" />
+                ) : p.logo ? (
+                  <div className="prog-card-logo">
+                    <img src={p.logo} alt={`${p.title} logo`} />
+                  </div>
+                ) : (
+                  <Placeholder variant="card" label="Photo coming soon" />
+                )}
                 <div className="prog-card-body">
                   <span className="prog-tag">{p.tag}</span>
                   <h3>{p.title}</h3>

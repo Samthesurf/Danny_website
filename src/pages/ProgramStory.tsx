@@ -56,7 +56,15 @@ export default function ProgramStory() {
 
       <section className="section--tight">
         <div className="wrap">
-          <Placeholder variant="wide" label="Photo coming soon" />
+          {program.image ? (
+            <img
+              src={program.image}
+              alt={program.title}
+              className="story-hero"
+            />
+          ) : (
+            <Placeholder variant="wide" label="Photo coming soon" />
+          )}
         </div>
       </section>
 
@@ -93,7 +101,13 @@ export default function ProgramStory() {
                 </a>
               </p>
             )}
-            <Placeholder variant="card" label="Photo coming soon" style={{ marginTop: 24 }} />
+            {program.logo ? (
+              <div className="story-logo" style={{ marginTop: 24 }}>
+                <img src={program.logo} alt={`${program.title} logo`} />
+              </div>
+            ) : (
+              <Placeholder variant="card" label="Photo coming soon" style={{ marginTop: 24 }} />
+            )}
           </div>
         </div>
       </section>
