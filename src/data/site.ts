@@ -9,7 +9,6 @@ export interface Person {
 }
 
 export interface PeopleSection {
-  eyebrow: string
   heading: string
   people: Person[]
 }
@@ -109,7 +108,6 @@ const programsBase: Program[] = [
       'Community co-facilitation with youth waste workers',
     ],
     people: {
-      eyebrow: 'Event team',
       heading: "Who's running the Summit",
       people: [
         { name: 'Daniel Olajuyigbe', role: 'Summit Host' },
@@ -148,7 +146,6 @@ const programsBase: Program[] = [
     ],
     tags: ['Funded by Captain Planet Foundation', 'Hosted under the Planeteer Alliance'],
     people: {
-      eyebrow: 'Speakers',
       heading: 'Who joined the conversation',
       people: [
         { name: 'Daniel Olajuyigbe', role: 'Founder, DACTION Initiative' },
@@ -198,7 +195,6 @@ const programsBase: Program[] = [
       label: 'Read the published feature on the Captain Planet Foundation site',
     },
     people: {
-      eyebrow: 'Campaign team',
       heading: 'Who ran the campaign',
       people: [
         { name: 'Daniel Olajuyigbe', role: 'Team Lead' },
@@ -236,7 +232,6 @@ const programsBase: Program[] = [
     ],
     tags: ['Funded by Captain Planet Foundation', 'Delivery support: RESWAYE'],
     people: {
-      eyebrow: 'Campaign team',
       heading: 'Who ran the campaign',
       people: [
         { name: 'Daniel Olajuyigbe', role: 'Speaker & Logistics' },
@@ -418,11 +413,6 @@ export interface GallerySection {
 
 export const gallerySections: GallerySection[] = [
   {
-    title: 'DACTION Earth Summit, 2026',
-    count: 0,
-    images: [],
-  },
-  {
     title: 'FIRE Meetup: Hydrogen Horizons, 2025',
     count: 8,
     images: [
@@ -519,7 +509,6 @@ export const siteNav: { to: string; label: string }[] = [
   { to: '/gallery', label: 'Gallery' },
   { to: '/team', label: 'Team' },
   { to: '/partners', label: 'Partners' },
-  { to: '/contact', label: 'Contact' },
 ]
 
 export const CONTACT = {

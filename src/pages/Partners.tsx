@@ -10,18 +10,17 @@ export default function Partners() {
     <>
       <section className="hero-simple">
         <div className="wrap">
-          <span className="eyebrow">Partners &amp; Recognition</span>
           <h1 style={{ maxWidth: '18ch' }}>Who backs the work.</h1>
           <p className="lede">
             DACTION's programs are delivered in direct partnership with international foundations,
-            local organizations, and academic institutions.
+            local organizations, and universities.
           </p>
         </div>
       </section>
 
       <section className="section--tight">
         <div className="wrap">
-          <span className="eyebrow">Partner organizations</span>
+          <h2>Partner organizations</h2>
 
           {partners.map((p) => (
             <div className="partner-row" key={p.name}>
@@ -42,7 +41,6 @@ export default function Partners() {
 
       <section className="section section--alt">
         <div className="wrap">
-          <span className="eyebrow">Recognition</span>
           <h2 style={{ maxWidth: '24ch' }}>Milestones earned along the way.</h2>
 
           <div className="grid grid--2" style={{ marginTop: 30 }}>

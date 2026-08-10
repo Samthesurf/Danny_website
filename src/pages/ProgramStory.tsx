@@ -71,14 +71,13 @@ export default function ProgramStory() {
       <section className="section">
         <div className="wrap grid grid--2">
           <div>
-            <span className="eyebrow">The story</span>
             <h2 style={{ maxWidth: '22ch' }}>{program.storyHeadline}</h2>
             {program.story.map((paragraph, i) => (
               <p key={i}>{paragraph}</p>
             ))}
           </div>
           <div>
-            <span className="eyebrow">At a glance</span>
+            <h3>At a glance</h3>
             <div className="stat-row" style={{ marginTop: 6 }}>
               {program.stats.map((stat) => (
                 <div className="stat" key={stat.label}>
@@ -115,7 +114,6 @@ export default function ProgramStory() {
       {program.people && (
         <section className="section section--alt">
           <div className="wrap">
-            <span className="eyebrow">{program.people.eyebrow}</span>
             <h2 style={{ maxWidth: '22ch' }}>{program.people.heading}</h2>
             <div className="people-grid">
               {program.people.people.map((person) => (

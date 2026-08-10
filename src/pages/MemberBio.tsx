@@ -36,7 +36,7 @@ export default function MemberBio() {
           </div>
           <div>
             <h1 style={{ fontSize: '2rem' }}>{member.name}</h1>
-            <span className="eyebrow" style={{ marginTop: 2 }}>
+            <span className="role" style={{ marginTop: 2 }}>
               {member.role}
             </span>
             {member.bio.map((paragraph, i) => (

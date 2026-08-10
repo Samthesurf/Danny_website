@@ -10,7 +10,6 @@ export default function Contact() {
     <>
       <section className="hero-simple">
         <div className="wrap">
-          <span className="eyebrow">Contact</span>
           <h1 style={{ maxWidth: '14ch' }}>Reach the team.</h1>
           <p className="lede">
             Whether you're a school, a potential partner, a funder, or just curious about our work,

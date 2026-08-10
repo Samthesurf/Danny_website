@@ -9,7 +9,6 @@ export default function NotFound() {
   return (
     <section className="hero-simple">
       <div className="wrap">
-        <span className="eyebrow">404</span>
         <h1 style={{ maxWidth: '18ch' }}>That page doesn't exist.</h1>
         <p className="lede">
           The link may be outdated, or the page may not have been built yet. Head back home to keep

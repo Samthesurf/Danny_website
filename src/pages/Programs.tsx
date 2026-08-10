@@ -12,7 +12,6 @@ export default function Programs() {
     <>
       <section className="hero-simple">
         <div className="wrap">
-          <span className="eyebrow">Programs</span>
           <h1 style={{ maxWidth: '16ch' }}>Our work, campaign by campaign.</h1>
           <p className="lede">
             Five flagship programs so far, shown most recent first. Each has its own page with the

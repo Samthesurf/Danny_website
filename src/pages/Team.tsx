@@ -12,11 +12,10 @@ export default function Team() {
     <>
       <section className="hero-simple">
         <div className="wrap">
-          <span className="eyebrow">Team</span>
           <h1 style={{ maxWidth: '16ch' }}>The core team.</h1>
           <p className="lede">
-            DACTION's campaigns are run by a small, hands-on leadership team, supplemented by
-            volunteers specific to each program. Click through to read more about each person.
+            DACTION's campaigns are run by a small, hands-on leadership team, with extra
+            volunteers brought in for each program. Click through to read more about each person.
           </p>
         </div>
       </section>
@@ -38,12 +37,11 @@ export default function Team() {
 
       <section className="section section--alt">
         <div className="wrap">
-          <span className="eyebrow">Beyond the core team</span>
-          <h2 style={{ maxWidth: '26ch' }}>Each campaign draws on its own volunteer roster.</h2>
+          <h2 style={{ maxWidth: '26ch' }}>Beyond the core team: every campaign brings in its own volunteers.</h2>
           <p style={{ marginTop: 14, maxWidth: '64ch' }}>
-            Beyond the standing team above, individual campaigns bring in volunteers for speaking,
-            logistics, media, graphics, registration, and judging. You'll find each campaign's team
-            listed on its own program page.
+            Beyond the standing team above, individual campaigns call on extra people for
+            speaking, logistics, media, graphics, registration, and judging. You'll find each
+            campaign's team listed on its own program page.
           </p>
           <Link to="/programs" className="btn btn--ghost">
             View programs

@@ -13,7 +13,6 @@ export default function Gallery() {
     <>
       <section className="hero-simple">
         <div className="wrap">
-          <span className="eyebrow">Gallery</span>
           <h1 style={{ maxWidth: '16ch' }}>Our work, in pictures.</h1>
           <p className="lede">
             Photos from each completed campaign, organized by program below. New photos are added
