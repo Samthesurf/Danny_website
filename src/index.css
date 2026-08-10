@@ -553,7 +553,7 @@ nav.primary a.nav-cta:hover, .mobile-nav a.nav-cta:hover{
 .footer-watermark{
   position:absolute; top:50%; right:-14%;
   transform:translateY(-50%);
-  width:min(62vw, 700px); height:auto;
+  width:min(52vw, 600px); height:auto;
   opacity:0.09;
   pointer-events:none; user-select:none;
 }
