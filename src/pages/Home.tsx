@@ -225,10 +225,11 @@ export default function Home() {
             <Reveal delay={0}>
               <div className="backed-card">
                 <div className="backed-card__logo">
-                  <span className="logo-chip">
+                  <span className="logo-chip" data-tooltip="Captain Planet Foundation">
                     <img
                       src="/assets/logos/captain-planet-foundation.png"
                       alt="Captain Planet Foundation logo"
+                      title="Captain Planet Foundation"
                     />
                   </span>
                 </div>
@@ -238,8 +239,8 @@ export default function Home() {
             <Reveal delay={120}>
               <div className="backed-card">
                 <div className="backed-card__logo">
-                  <span className="logo-chip">
-                    <img src="/assets/logos/reswaye.png" alt="RESWAYE logo" />
+                  <span className="logo-chip" data-tooltip="RESWAYE">
+                    <img src="/assets/logos/reswaye.png" alt="RESWAYE logo" title="RESWAYE" />
                   </span>
                 </div>
                 <p>Lagos, Nigeria</p>
@@ -248,8 +249,8 @@ export default function Home() {
             <Reveal delay={240}>
               <div className="backed-card">
                 <div className="backed-card__logo">
-                  <span className="logo-chip">
-                    <img src="/assets/logos/abuadmun.png" alt="ABUADMUN logo" />
+                  <span className="logo-chip" data-tooltip="ABUADMUN">
+                    <img src="/assets/logos/abuadmun.png" alt="ABUADMUN logo" title="ABUADMUN" />
                   </span>
                 </div>
                 <p>Ekiti State, Nigeria</p>

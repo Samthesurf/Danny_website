@@ -26,7 +26,14 @@ export default function Partners() {
             <div className="partner-row" key={p.name}>
               <div className="partner-row-main">
                 {p.logo ? (
-                  <img src={p.logo} alt={`${p.name} logo`} className="partner-logo" />
+                  <span className="partner-logo-tip" data-tooltip={p.name}>
+                    <img
+                      src={p.logo}
+                      alt={`${p.name} logo`}
+                      title={p.name}
+                      className="partner-logo"
+                    />
+                  </span>
                 ) : null}
                 <div>
                   <span className="p-name">{p.name}</span>

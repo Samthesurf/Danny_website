@@ -324,6 +324,36 @@ nav.primary a.nav-cta:hover, .mobile-nav a.nav-cta:hover{
 .backed-card h3{color:#F5F8FA; font-size:1.18rem; margin:0;}
 .backed-card p{margin:0; color:#B9C7D6; font-size:0.94rem;}
 
+/* ---------- logo hover tooltips ---------- */
+.logo-chip[data-tooltip], .partner-logo-tip[data-tooltip]{
+  position:relative;
+}
+.logo-chip[data-tooltip]::after, .partner-logo-tip[data-tooltip]::after{
+  content:attr(data-tooltip);
+  position:absolute; left:50%; bottom:calc(100% + 10px);
+  transform:translateX(-50%);
+  background:#fff; color:#122A4A;
+  font-family:'Inter',sans-serif; font-size:0.8rem; font-weight:600;
+  letter-spacing:0.01em; padding:7px 12px; border-radius:8px;
+  border:1px solid rgba(18,42,74,0.14);
+  white-space:nowrap; box-shadow:0 8px 22px rgba(18,42,74,0.22);
+  opacity:0; pointer-events:none; transition:opacity 0.16s ease, transform 0.16s ease;
+  transform:translate(-50%, 4px); z-index:30;
+}
+.logo-chip[data-tooltip]:hover::after, .partner-logo-tip[data-tooltip]:hover::after{
+  opacity:1; transform:translate(-50%, 0);
+}
+/* small caret pointing down to the logo */
+.logo-chip[data-tooltip]::before, .partner-logo-tip[data-tooltip]::before{
+  content:''; position:absolute; left:50%; bottom:calc(100% + 4px);
+  transform:translateX(-50%);
+  border:6px solid transparent; border-top-color:#fff; filter:drop-shadow(0 1px 0 rgba(18,42,74,0.14));
+  opacity:0; pointer-events:none; transition:opacity 0.16s ease; z-index:30;
+}
+.logo-chip[data-tooltip]:hover::before, .partner-logo-tip[data-tooltip]:hover::before{
+  opacity:1;
+}
+
 /* ---------- campaign thumb strip (home 'Our work') ---------- */
 .work-strip{
   display:grid; grid-template-columns:repeat(5,1fr); gap:14px; margin-top:30px;
@@ -497,6 +527,7 @@ nav.primary a.nav-cta:hover, .mobile-nav a.nav-cta:hover{
   background:var(--paper); border:1px solid var(--line); border-radius:var(--radius-sm);
   padding:8px;
 }
+.partner-logo-tip{display:inline-flex; flex-shrink:0; align-items:center;}
 .partner-row:first-of-type{border-top:1px solid var(--line);}
 .partner-row .p-name{font-family:'Fraunces', serif; font-weight:600; font-size:1.2rem; color:var(--navy);}
 .partner-row .p-desc{font-size:0.94rem; color:var(--ink-soft); max-width:48ch; margin-top:4px;}
