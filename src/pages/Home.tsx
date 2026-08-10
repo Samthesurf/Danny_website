@@ -130,7 +130,7 @@ export default function Home() {
       <section className="section">
         <div className="wrap">
           <Reveal>
-            <h2 style={{ maxWidth: '24ch' }}>Why DACTION</h2>
+            <h2 style={{ maxWidth: '24ch' }}>Why DACTION?</h2>
           </Reveal>
           <div className="grid grid--3" style={{ marginTop: 32 }}>
             <Reveal delay={0}>
@@ -193,7 +193,7 @@ export default function Home() {
       <section className="section">
         <div className="wrap">
           <Reveal>
-            <h2 style={{ maxWidth: '22ch' }}>Our work: five campaigns and counting.</h2>
+            <h2 style={{ maxWidth: '22ch' }}>Five campaigns and counting.</h2>
             <p style={{ marginTop: 10, maxWidth: '64ch' }}>
               From ocean conservation classrooms to a hydrogen energy meetup and an upcoming soil and
               food-systems summit, DACTION's programs shift each year to meet the most pressing
