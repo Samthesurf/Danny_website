@@ -197,7 +197,7 @@ nav.primary a.nav-cta:hover, .mobile-nav a.nav-cta:hover{
   box-shadow:0 24px 54px rgba(18,42,74,0.16);
 }
 .home-partner-logo{
-  background:var(--paper); border:1px solid var(--blue);
+  background:var(--paper); border:1px solid transparent;
   border-radius:20px; padding:34px;
   display:flex; align-items:center; justify-content:center;
   box-shadow:0 14px 36px rgba(18,42,74,0.08);
