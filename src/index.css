@@ -320,7 +320,7 @@ nav.primary a.nav-cta:hover, .mobile-nav a.nav-cta:hover{
   background:#fff; border-radius:12px; padding:8px 14px;
   box-shadow:0 4px 14px rgba(0,0,0,0.18);
 }
-.backed-card__logo img{max-height:44px; max-width:150px; width:auto; height:auto; display:block;}
+.backed-card__logo img{max-height:56px; max-width:150px; width:auto; height:auto; display:block;}
 .backed-card h3{color:#F5F8FA; font-size:1.18rem; margin:0;}
 .backed-card p{margin:0; color:#B9C7D6; font-size:0.94rem;}
 
