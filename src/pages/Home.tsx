@@ -225,7 +225,12 @@ export default function Home() {
             <Reveal delay={0}>
               <div className="backed-card">
                 <div className="backed-card__logo">
-                  <span className="backed-wordmark">Captain Planet Foundation</span>
+                  <span className="logo-chip">
+                    <img
+                      src="/assets/logos/captain-planet-foundation.png"
+                      alt="Captain Planet Foundation logo"
+                    />
+                  </span>
                 </div>
                 <p>Atlanta, Georgia, USA</p>
               </div>
@@ -233,7 +238,9 @@ export default function Home() {
             <Reveal delay={120}>
               <div className="backed-card">
                 <div className="backed-card__logo">
-                  <span className="backed-wordmark">RESWAYE</span>
+                  <span className="logo-chip">
+                    <img src="/assets/logos/reswaye.png" alt="RESWAYE logo" />
+                  </span>
                 </div>
                 <p>Lagos, Nigeria</p>
               </div>

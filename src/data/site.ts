@@ -360,12 +360,14 @@ export const partners: Partner[] = [
     since: 'Since 2022',
     description:
       "Our primary funding and program partner since 2022, based in Atlanta, Georgia. DACTION's founder also sits on the Foundation's Planeteer Alliance Wisdom Council, its global network for youth environmental leaders.",
+    logo: '/assets/logos/captain-planet-foundation.png',
   },
   {
     name: 'RESWAYE',
     since: 'Since 2022',
     description:
       "The Recycling Scheme for Women and Youth Empowerment has been DACTION's delivery partner on the ground in Lagos and Ondo States since our first campaign, supporting cleanups, school programs, and community venues.",
+    logo: '/assets/logos/reswaye.png',
   },
   {
     name: 'ABUADMUN',
