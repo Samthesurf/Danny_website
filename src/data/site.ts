@@ -110,13 +110,37 @@ const programsBase: Program[] = [
     people: {
       heading: "Who's running the Summit",
       people: [
-        { name: 'Daniel Olajuyigbe', role: 'Summit Host' },
-        { name: 'Ayokunle Durojaiye', role: 'Operations' },
-        { name: 'Anenechukwu Saintchristopher', role: 'Media' },
-        { name: 'Ebenezer Tomoye', role: 'Documentation' },
-        { name: 'Faith Melodi', role: 'Photography' },
+        {
+          name: 'Daniel Olajuyigbe',
+          role: 'Summit Host',
+          headshot: '/assets/img/team/daniel-olajuyigbe/headshot.jpg',
+        },
+        {
+          name: 'Ayokunle Durojaiye',
+          role: 'Operations',
+          headshot: '/assets/img/team/ayokunle-durojaiye/headshot.jpg',
+        },
+        {
+          name: 'Anenechukwu Saintchristopher',
+          role: 'Media',
+          headshot: '/assets/img/earth-summit/team/saint-christopher-annenechukwu.jpg',
+        },
+        {
+          name: 'Ebenezer Tomoye',
+          role: 'Documentation',
+          headshot: '/assets/img/team/ebenezer-tomoye/headshot.jpg',
+        },
+        {
+          name: 'Faith Melodi',
+          role: 'Photography',
+          headshot: '/assets/img/ocean-conservation/team/faith-melodi.jpg',
+        },
         { name: 'David Olajuyigbe', role: 'Registration' },
-        { name: 'Leramo Oluwadunsin', role: 'Emcee' },
+        {
+          name: 'Leramo Oluwadunsin',
+          role: 'Emcee',
+          headshot: '/assets/img/ocean-conservation/team/oluwadunsin-leramo.jpg',
+        },
         { name: 'John Kolade', role: 'Technical Support' },
       ],
     },
