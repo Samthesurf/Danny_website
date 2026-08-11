@@ -48,11 +48,10 @@ export default function Programs() {
         </div>
       </section>
 
-      <section className="section section--navy">
+      <section className="section section--navy section--navy-cta">
         <div className="wrap">
           <div className="gallery-cta">
             <div className="gallery-cta__text">
-              <span className="eyebrow">Every campaign, captured</span>
               <h2 style={{ maxWidth: '22ch' }}>See the work in pictures.</h2>
               <p>
                 Photo galleries for every campaign, organized by program and moment, updated as
