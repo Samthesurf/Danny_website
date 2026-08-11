@@ -63,6 +63,7 @@ const programsBase: Program[] = [
     statusLabel: 'Upcoming, November 2026',
     location: 'Afe Babalola University, Ado-Ekiti',
     focus: 'Youth diplomacy & institutional partnership',
+    image: '/assets/logos/abuadmun-partnership.png',
     logo: '/assets/logos/abuadmun.png',
     storyHeadline: 'Backing the first Model UN at Daniel\u2019s own university.',
     story: [
