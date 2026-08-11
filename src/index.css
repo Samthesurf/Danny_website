@@ -653,7 +653,7 @@ ul.plain li::before{
   border-left:3px solid var(--accent); padding-left:16px;
 }
 /* Gallery call-to-action (bottom of programs page) */
-.section--navy-cta{padding:34px 0;}
+.section--navy-cta{padding:54px 0;}
 .gallery-cta{
   display:flex; align-items:center; justify-content:space-between;
   gap:32px; flex-wrap:wrap;
