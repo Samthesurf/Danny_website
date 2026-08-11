@@ -50,13 +50,19 @@ export default function Programs() {
 
       <section className="section section--navy">
         <div className="wrap">
-          <p className="note" style={{ color: '#C3D0DE' }}>
-            Want to see photos from any of these campaigns? Visit the{' '}
-            <Link to="/gallery" style={{ color: '#fff', textDecoration: 'underline' }}>
-              gallery
+          <div className="gallery-cta">
+            <div className="gallery-cta__text">
+              <span className="eyebrow">Every campaign, captured</span>
+              <h2 style={{ maxWidth: '22ch' }}>See the work in pictures.</h2>
+              <p>
+                Photo galleries for every campaign, organized by program and moment, updated as
+                each event is delivered.
+              </p>
+            </div>
+            <Link to="/gallery" className="btn btn--accent gallery-cta__btn">
+              Visit the gallery &rarr;
             </Link>
-            , organized by program.
-          </p>
+          </div>
         </div>
       </section>
     </>
