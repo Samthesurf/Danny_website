@@ -1,5 +1,6 @@
 import { useParams, Link } from 'react-router-dom'
 import Placeholder from '../components/Placeholder'
+import BackLink from '../components/BackLink'
 import { teamMembers } from '../data/site'
 import { useEffect } from 'react'
 
@@ -27,12 +28,18 @@ export default function MemberBio() {
   return (
     <section className="section--tight">
       <div className="wrap">
-        <Link to="/team" style={{ fontSize: '0.9rem', fontWeight: 600 }}>
-          &larr; All team members
-        </Link>
+        <BackLink to="/team">All team members</BackLink>
         <div className="bio-grid" style={{ marginTop: 24 }}>
           <div>
-            <Placeholder variant="portrait" label="Photo coming soon" />
+            {member.headshot ? (
+              <img
+                src={member.headshot}
+                alt={`Portrait of ${member.name}`}
+                className="bio-portrait"
+              />
+            ) : (
+              <Placeholder variant="portrait" label="Photo coming soon" />
+            )}
           </div>
           <div>
             <h1 style={{ fontSize: '2rem' }}>{member.name}</h1>
@@ -48,6 +55,12 @@ export default function MemberBio() {
             </Link>
           </div>
         </div>
+
+        {member.work && (
+          <div style={{ marginTop: 40 }}>
+            <img src={member.work} alt={`${member.name} at work`} className="bio-work" loading="lazy" />
+          </div>
+        )}
       </div>
     </section>
   )

@@ -1,5 +1,6 @@
 import { useParams, Link } from 'react-router-dom'
 import Placeholder from '../components/Placeholder'
+import BackLink from '../components/BackLink'
 import { programs } from '../data/site'
 import { useEffect } from 'react'
 
@@ -34,9 +35,7 @@ export default function ProgramStory() {
     <>
       <section className="hero-simple">
         <div className="wrap">
-          <Link to="/programs" style={{ fontSize: '0.9rem', fontWeight: 600 }}>
-            &larr; All programs
-          </Link>
+          <BackLink to="/programs">All programs</BackLink>
           <div style={{ marginTop: 18 }}>
             <span className={`pill-status pill-status--${program.status}`}>
               {program.statusLabel}
@@ -57,11 +56,7 @@ export default function ProgramStory() {
       <section className="section--tight">
         <div className="wrap">
           {program.image ? (
-            <img
-              src={program.image}
-              alt={program.title}
-              className="story-hero"
-            />
+            <img src={program.image} alt={program.title} className="story-hero" />
           ) : (
             <Placeholder variant="wide" label="Photo coming soon" />
           )}
@@ -118,7 +113,16 @@ export default function ProgramStory() {
             <div className="people-grid">
               {program.people.people.map((person) => (
                 <div className="p-item" key={`${person.name}-${person.role}`}>
-                  <Placeholder variant="avatar" label="" />
+                  {person.headshot ? (
+                    <img
+                      src={person.headshot}
+                      alt={person.name}
+                      loading="lazy"
+                      className="p-avatar"
+                    />
+                  ) : (
+                    <Placeholder variant="avatar" label="" />
+                  )}
                   <div className="p-name">{person.name}</div>
                   <div className="p-role">{person.role}</div>
                 </div>

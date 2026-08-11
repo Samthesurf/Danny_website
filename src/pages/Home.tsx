@@ -98,9 +98,9 @@ export default function Home() {
           <Reveal>
             <h1>Young people, leading real environmental change.</h1>
             <p className="lede">
-              DACTION Initiative is a youth-led nonprofit based in Lekki, Lagos, founded in 2021,
-              running hands-on environmental programs across Nigeria: ocean conservation, coastal
-              cleanups, reforestation, clean energy education, and sustainable food systems.
+              DACTION Initiative is a youth-led nonprofit based in Lekki, Lagos, running hands-on
+              environmental programs across Nigeria: ocean conservation, coastal cleanups,
+              reforestation, clean energy education, and sustainable food systems.
             </p>
             <div className="hero-actions">
               <Link to="/programs" className="btn btn--accent">
@@ -113,7 +113,7 @@ export default function Home() {
           </Reveal>
           <Reveal delay={150}>
             <img
-              src="/assets/img/ocean-conservation/ocean-01.jpg"
+              src="/assets/img/ocean-conservation/hero.jpg"
               alt="Students at an ocean conservation outreach session"
               className="hero-img"
             />

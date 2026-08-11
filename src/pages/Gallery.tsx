@@ -1,4 +1,3 @@
-import Placeholder from '../components/Placeholder'
 import { gallerySections } from '../data/site'
 import { useEffect } from 'react'
 
@@ -8,15 +7,15 @@ export default function Gallery() {
   }, [])
 
   // Campaigns with real photos are shown; upcoming events (no event photos yet)
-  // are noted below the grid.
+  // are noted inside their subsection below.
   return (
     <>
       <section className="hero-simple">
         <div className="wrap">
           <h1 style={{ maxWidth: '16ch' }}>Our work, in pictures.</h1>
           <p className="lede">
-            Photos from each completed campaign, organized by program below. New photos are added
-            as each campaign is delivered.
+            Photos from each campaign, organized below by program and by moment, most recent
+            first. New photos are added as each campaign is delivered.
           </p>
         </div>
       </section>
@@ -26,25 +25,28 @@ export default function Gallery() {
           {gallerySections.map((section) => (
             <div className="gallery-section" key={section.title}>
               <h2 style={{ fontSize: '1.4rem' }}>{section.title}</h2>
-              {section.images && section.images.length > 0 ? (
-                <div className="gallery-grid">
-                  {section.images.map((src) => (
-                    <img
-                      key={src}
-                      src={src}
-                      alt={section.title}
-                      loading="lazy"
-                      className="gallery-img"
-                    />
-                  ))}
+              {section.moments.map((moment) => (
+                <div className="gallery-sub" key={moment.title}>
+                  <h3>{moment.title}</h3>
+                  {moment.images && moment.images.length > 0 ? (
+                    <div className="gallery-grid">
+                      {moment.images.map((src) => (
+                        <img
+                          key={src}
+                          src={src}
+                          alt={`${section.title} - ${moment.title}`}
+                          loading="lazy"
+                          className="gallery-img"
+                        />
+                      ))}
+                    </div>
+                  ) : (
+                    <p style={{ marginBottom: 28, maxWidth: '60ch', color: 'var(--ink-soft)' }}>
+                      {moment.note}
+                    </p>
+                  )}
                 </div>
-              ) : (
-                <Placeholder
-                  variant="wide"
-                  label="Photos coming after the event"
-                  style={{ maxWidth: 560 }}
-                />
-              )}
+              ))}
             </div>
           ))}
         </div>

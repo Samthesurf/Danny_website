@@ -37,6 +37,11 @@ export default function Contact() {
                 Instagram, @daction_initiative
               </a>
             </p>
+            <p>
+              <a href={CONTACT.linkedinCompany} target="_blank" rel="noopener">
+                LinkedIn company page &rarr;
+              </a>
+            </p>
           </div>
           <div className="card">
             <h3>Founder &amp; Executive Director</h3>

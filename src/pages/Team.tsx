@@ -8,27 +8,71 @@ export default function Team() {
     document.title = 'Team | DACTION Initiative'
   }, [])
 
+  const founder = teamMembers.find((m) => m.slug === 'daniel-olajuyigbe')
+  const directors = teamMembers.filter((m) => m.slug !== 'daniel-olajuyigbe')
+
   return (
     <>
       <section className="hero-simple">
         <div className="wrap">
-          <h1 style={{ maxWidth: '16ch' }}>The core team.</h1>
+          <h1 style={{ maxWidth: '16ch' }}>The people behind the work.</h1>
           <p className="lede">
-            DACTION's campaigns are run by a small, hands-on leadership team, with extra
-            volunteers brought in for each program. Click through to read more about each person.
+            DACTION is led by a founder and eight directors, each responsible for a distinct part
+            of how the organization runs. Click through to read more about anyone below.
           </p>
         </div>
       </section>
 
       <section className="section--tight">
         <div className="wrap">
-          <div className="grid grid--3">
-            {teamMembers.map((member) => (
-              <Link to={`/team/${member.slug}`} className="team-card" key={member.slug}>
+          {founder && (
+            <Link
+              to={`/team/${founder.slug}`}
+              className="founder-feature"
+              style={{ textDecoration: 'none', color: 'inherit' }}
+            >
+              {founder.headshot ? (
+                <img
+                  src={founder.headshot}
+                  alt={`Portrait of ${founder.name}`}
+                  className="founder-feature__img"
+                />
+              ) : (
                 <Placeholder variant="portrait" label="Photo coming soon" />
+              )}
+              <div>
+                <span className="eyebrow" style={{ marginBottom: 4 }}>
+                  Founder
+                </span>
+                <h2 style={{ fontSize: '2.1rem', marginBottom: 2 }}>{founder.name}</h2>
+                <span className="role">{founder.role}</span>
+                <p style={{ maxWidth: '56ch' }}>{founder.blurb}</p>
+                <span className="link-arrow" style={{ color: 'var(--blue-deep)' }}>
+                  Read Daniel's full story &rarr;
+                </span>
+              </div>
+            </Link>
+          )}
+
+          <div className="grid grid--3" style={{ marginTop: 36 }}>
+            {directors.map((member) => (
+              <Link to={`/team/${member.slug}`} className="team-card" key={member.slug}>
+                {member.headshot ? (
+                  <img
+                    src={member.headshot}
+                    alt={`Portrait of ${member.name}`}
+                    className="team-card__img"
+                    loading="lazy"
+                  />
+                ) : (
+                  <Placeholder variant="portrait" label="Photo coming soon" />
+                )}
                 <h3>{member.name}</h3>
                 <span className="role">{member.role}</span>
                 <p>{member.blurb}</p>
+                <span className="link-arrow" style={{ color: 'var(--blue-deep)', display: 'inline-block', marginTop: 4 }}>
+                  Read {member.name.split(' ')[0]}'s bio &rarr;
+                </span>
               </Link>
             ))}
           </div>
@@ -37,11 +81,13 @@ export default function Team() {
 
       <section className="section section--alt">
         <div className="wrap">
-          <h2 style={{ maxWidth: '26ch' }}>Beyond the core team: every campaign brings in its own volunteers.</h2>
+          <h2 style={{ maxWidth: '26ch' }}>
+            Each campaign draws on its own volunteer roster.
+          </h2>
           <p style={{ marginTop: 14, maxWidth: '64ch' }}>
-            Beyond the standing team above, individual campaigns call on extra people for
-            speaking, logistics, media, graphics, registration, and judging. You'll find each
-            campaign's team listed on its own program page.
+            Beyond the leadership above, individual campaigns bring in volunteers for speaking,
+            logistics, media, graphics, registration, and judging. You'll find each campaign's
+            team listed on its own program page.
           </p>
           <Link to="/programs" className="btn btn--ghost">
             View programs

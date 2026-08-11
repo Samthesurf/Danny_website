@@ -62,7 +62,7 @@ export default function About() {
               <div className="story-side">
                 <div className="story-photo">
                   <img
-                    src="/assets/img/ocean-conservation/ocean-03.jpg"
+                    src="/assets/img/ocean-conservation/school-03.jpg"
                     alt="Daniel Olajuyigbe presenting DACTION's ocean conservation work"
                   />
                 </div>
@@ -82,7 +82,7 @@ export default function About() {
                   programs meant to engage them were designed by young people.
                 </blockquote>
                 <p>
-                  DACTION began in June 2021, more as a question than a plan. Daniel Olajuyigbe,
+                  DACTION began in June 2022, more as a question than a plan. Daniel Olajuyigbe,
                   then an undergraduate engineering student at Afe Babalola University, kept
                   noticing the same gap: the programs meant to engage young people were almost
                   always run by adults, for children, with little room for youth to lead.
