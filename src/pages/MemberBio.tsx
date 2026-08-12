@@ -46,8 +46,20 @@ export default function MemberBio() {
             <span className="role" style={{ marginTop: 2 }}>
               {member.role}
             </span>
-            {member.bio.map((paragraph, i) => (
+            {member.bio.slice(0, Math.ceil(member.bio.length / 2)).map((paragraph, i) => (
               <p key={i}>{paragraph}</p>
+            ))}
+            {member.work && (
+              <img
+                src={member.work}
+                alt={`${member.name} at work`}
+                className="bio-work"
+                loading="lazy"
+                style={{ margin: '18px 0' }}
+              />
+            )}
+            {member.bio.slice(Math.ceil(member.bio.length / 2)).map((paragraph, i) => (
+              <p key={member.bio.length / 2 + i}>{paragraph}</p>
             ))}
             {member.note && <p style={{ fontStyle: 'italic', color: 'var(--ink-soft)' }}>{member.note}</p>}
             <Link to="/team" className="btn btn--ghost">
@@ -55,12 +67,6 @@ export default function MemberBio() {
             </Link>
           </div>
         </div>
-
-        {member.work && (
-          <div style={{ marginTop: 40 }}>
-            <img src={member.work} alt={`${member.name} at work`} className="bio-work" loading="lazy" />
-          </div>
-        )}
       </div>
     </section>
   )

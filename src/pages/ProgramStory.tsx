@@ -64,6 +64,11 @@ export default function ProgramStory() {
           ) : (
             <Placeholder variant="wide" label="Photo coming soon" />
           )}
+          <p style={{ marginTop: 14 }}>
+            <Link to={`/gallery#gallery-${program.slug}`}>
+              View more pictures from this {program.status === 'upcoming' ? 'partnership' : 'campaign'} in the gallery &rarr;
+            </Link>
+          </p>
         </div>
       </section>
 

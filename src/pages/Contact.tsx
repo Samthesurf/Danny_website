@@ -60,11 +60,6 @@ export default function Contact() {
                 LinkedIn profile &rarr;
               </a>
             </p>
-            <p>
-              <a href={CONTACT.captainPlanetProfile} target="_blank" rel="noopener">
-                Captain Planet Foundation profile &rarr;
-              </a>
-            </p>
           </div>
         </div>
       </section>

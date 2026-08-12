@@ -168,7 +168,7 @@ function SiteFooter() {
               <Brand variant="white" />
             </div>
             <p className="footer-tagline">
-              A youth-led environmental nonprofit running hands-on programs
+              DACTION Initiative is a youth-led nonprofit running hands-on environmental programs
               across Nigeria.
             </p>
             <address className="footer-address">{CONTACT.address}</address>

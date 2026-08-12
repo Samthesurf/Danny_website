@@ -89,7 +89,7 @@ const programsBase: Program[] = [
     tag: '2026 · Upcoming',
     title: 'DACTION Earth Summit: Compost, Cultivate, Conserve',
     blurb:
-      'A full-day summit on soil health, composting, and sustainable food systems at a Nigerian university, co-facilitated with informal youth waste workers.',
+      'A full-day summit on soil health, composting, and sustainable food systems at a federal university of technology, co-facilitated with informal youth waste workers.',
     status: 'upcoming',
     statusLabel: 'Upcoming, September 2026',
     location: 'Federal University of Technology Akure (FUTA), Ondo State',
@@ -132,6 +132,7 @@ const programsBase: Program[] = [
       'The session closed with participants making personal pledges: pursuing renewable energy research, applying to postgraduate programmes in the field, or simply carrying sustainability into whatever engineering path they choose next.',
     ],
     stats: [
+      { num: '55+', label: 'attendees at event' },
       { num: '2', label: 'sessions, in person and online' },
       { num: '3', label: 'countries represented on the panel' },
     ],
@@ -142,11 +143,11 @@ const programsBase: Program[] = [
         {
           name: 'Daniel Olajuyigbe',
           role: 'Founder, DACTION Initiative',
-          headshot: '/assets/img/team/daniel-olajuyigbe/headshot.jpg',
+          headshot: '/assets/img/hydrogen-horizons/team/daniel-olajuyigbe.jpg',
         },
         {
           name: 'Dr. Johnson Olajuyigbe',
-          role: 'Executive, Nigerian National Petroleum Company (Nigeria)',
+          role: 'Executive, Nigerian National Petroleum Company (Nigeria) rtd.',
           headshot: '/assets/img/hydrogen-horizons/team/dr-johnson-olajuyigbe.jpg',
         },
         {
@@ -206,7 +207,7 @@ const programsBase: Program[] = [
         {
           name: 'Daniel Olajuyigbe',
           role: 'Team Lead',
-          headshot: '/assets/img/team/daniel-olajuyigbe/headshot.jpg',
+          headshot: '/assets/img/youth-vs-climate-change/team/daniel-olajuyigbe.jpg',
         },
         {
           name: 'Oluwanifemi Olajuyigbe',
@@ -460,6 +461,7 @@ export const teamMembers: TeamMember[] = [
     blurb:
       "Carries DACTION's work into policy and public conversation, representing the organization externally and building its voice on youth and climate policy.",
     headshot: '/assets/img/team/precious-ojo/headshot.jpg',
+    work: '/assets/img/team/precious-ojo/work.jpg',
     bio: [
       'Ojo Precious Oluwasemilore, known as Fiyin, is a marine geoscientist and oil and gas professional who carries DACTION\u2019s work into policy and public conversation, representing the organization externally and building its voice on youth and climate policy.',
       'He holds a B.Tech in Marine Geosciences from the Federal University of Technology, Akure, and is currently pursuing an MSc in Oil and Gas Engineering at Nile University of Nigeria. His career bridges the regulatory and technical sides of the energy sector: as a Graduate Intern in the Exploration and Acreage Management Department of the Nigerian Upstream Petroleum Regulatory Commission (NUPRC), he reviewed geotechnical, geophysical, and core acquisition survey applications, supported compliance environmental audits, and contributed to drafting exploration guidelines for the industry. His research background began at the Nigerian Institute for Oceanography and Marine Research (NIOMR), spanning marine biology, marine geology, chemical oceanography, and marine meteorology. He currently serves as a Community Associate at Regus, alongside earlier experience managing operations at Nezek Pharmacy.',
@@ -530,10 +532,6 @@ export const recognition: Recognition[] = [
     text: 'Summit Grant, Captain Planet Foundation, awarded to fund the DACTION Earth Summit.',
   },
   {
-    year: '2026',
-    text: 'Seat on the Planeteer Alliance Wisdom Council, Captain Planet Foundation.',
-  },
-  {
     year: '2025',
     text: 'Meetup grant, Captain Planet Foundation, awarded to fund FIRE Meetup: Hydrogen Horizons.',
   },
@@ -555,30 +553,41 @@ export interface GalleryMoment {
 }
 
 export interface GallerySection {
+  id: string
   title: string
   moments: GalleryMoment[]
 }
 
 export const gallerySections: GallerySection[] = [
   {
+    id: 'gallery-abuadmun',
     title: 'ABUADMUN Conference Partnership, 2026',
     moments: [
       {
         title: 'Partnership & Planning',
-        note: 'Photos added after the first conference in November 2026.',
+        note: 'The inaugural conference takes place in November, 2026. More photos will be added here once the event has happened.',
       },
     ],
   },
   {
+    id: 'gallery-earth-summit',
     title: 'DACTION Earth Summit, 2026',
     moments: [
       {
-        title: 'Summit day',
-        note: 'This summit takes place in September 2026. Photos will be added here once the event has happened.',
+        title: 'Summit promotions',
+        images: [
+          '/assets/img/earth-summit/hero.jpg',
+          '/assets/img/earth-summit/poster-01.jpg',
+          '/assets/img/earth-summit/poster-02.jpg',
+          '/assets/img/earth-summit/poster-03.jpg',
+          '/assets/img/earth-summit/poster-04.jpg',
+        ],
+        note: 'This summit takes place in September 2026. More photos will be added here once the event has happened.',
       },
     ],
   },
   {
+    id: 'gallery-hydrogen-horizons',
     title: 'Hydrogen Horizons: Engineering Renewable Energy Solutions, 2025',
     moments: [
       {
@@ -598,6 +607,7 @@ export const gallerySections: GallerySection[] = [
     ],
   },
   {
+    id: 'gallery-youth-vs-climate-change',
     title: 'Youth vs. Climate Change, 2024',
     moments: [
       {
@@ -625,6 +635,7 @@ export const gallerySections: GallerySection[] = [
     ],
   },
   {
+    id: 'gallery-ocean-conservation',
     title: 'Ocean Conservation from the Classroom, 2022',
     moments: [
       {

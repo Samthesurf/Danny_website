@@ -23,7 +23,7 @@ export default function Gallery() {
       <section className="section--tight">
         <div className="wrap">
           {gallerySections.map((section) => (
-            <div className="gallery-section" key={section.title}>
+            <div className="gallery-section" id={section.id} key={section.title}>
               <h2 style={{ fontSize: '1.4rem' }}>{section.title}</h2>
               {section.moments.map((moment) => (
                 <div className="gallery-sub" key={moment.title}>

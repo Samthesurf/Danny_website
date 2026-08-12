@@ -301,7 +301,7 @@ a.back-link--navy:hover{color:#fff;}
 }
 .stat:hover{transform:translateY(-3px); box-shadow:0 14px 32px rgba(18,42,74,0.10);}
 .stat .num{
-  font-family:'Fraunces', serif; font-weight:600; font-size:2.7rem; color:var(--navy);
+  font-family:'Fraunces', serif; font-weight:600; font-size:2.7rem; color:var(--accent);
   display:block; line-height:1;
 }
 .stat .label{
@@ -309,7 +309,7 @@ a.back-link--navy:hover{color:#fff;}
   display:block; margin-top:10px; max-width:18ch;
 }
 .section--navy .stat{background:rgba(255,255,255,0.05); border-color:rgba(255,255,255,0.12); box-shadow:none;}
-.section--navy .stat .num{color:#F5F8FA;}
+.section--navy .stat .num{color:var(--accent);}
 .section--navy .stat .label{color:#B9C7D6;}
 
 /* ---------- cards / grid ---------- */
@@ -344,14 +344,20 @@ a.back-link--navy:hover{color:#fff;}
 }
 .backed-card:hover{background:rgba(255,255,255,0.09); border-color:rgba(255,255,255,0.22); transform:translateY(-3px);}
 .backed-card__logo{
-  height:64px; display:flex; align-items:center;
+  height:72px; display:flex; align-items:center; justify-content:flex-start;
 }
 .backed-card__logo .logo-chip{
   display:inline-flex; align-items:center; justify-content:center;
-  background:#fff; border-radius:12px; padding:8px 14px;
+  background:#fff; border-radius:12px; padding:6px 10px;
   box-shadow:0 4px 14px rgba(0,0,0,0.18);
 }
-.backed-card__logo img{max-height:56px; max-width:150px; width:auto; height:auto; display:block;}
+.backed-card__logo img{max-height:62px; max-width:220px; width:auto; height:auto; display:block;}
+.backed-card__logo .logo-chip--caption{gap:10px; padding:8px 14px;}
+.backed-card__logo .logo-chip--caption img{max-height:46px; max-width:150px;}
+.logo-chip__caption{
+  font-family:'Inter', sans-serif; font-size:0.82rem; font-weight:700;
+  color:var(--navy); white-space:nowrap; line-height:1.1;
+}
 .backed-card h3{color:#F5F8FA; font-size:1.18rem; margin:0;}
 .backed-card p{margin:0; color:#B9C7D6; font-size:0.94rem;}
 
@@ -416,13 +422,14 @@ a.back-link--navy:hover{color:#fff;}
 
 /* ---------- program overview cards ---------- */
 .prog-grid{
-  display:flex; flex-wrap:wrap; justify-content:center; gap:26px;
+  display:grid; grid-template-columns:repeat(3, 1fr); gap:26px; align-items:stretch;
 }
 .prog-card{
-  flex:0 1 340px; max-width:360px;
   border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; background:var(--paper);
   display:flex; flex-direction:column; height:100%;
 }
+@media (max-width:960px){.prog-grid{grid-template-columns:repeat(2, 1fr);}}
+@media (max-width:600px){.prog-grid{grid-template-columns:1fr;}}
 .prog-card .placeholder--card{margin-bottom:0; border-radius:0;}
 .prog-card-img{
   width:100%; aspect-ratio:4/3; object-fit:cover; display:block;
@@ -511,7 +518,7 @@ a.back-link--navy:hover{color:#fff;}
   text-align:center; padding:28px 16px; background:#fff;
   border:1px solid var(--line); border-radius:16px;
 }
-.stat-box .num{font-family:'Fraunces', serif; font-size:2.5rem; font-weight:700; color:var(--navy); line-height:1;}
+.stat-box .num{font-family:'Fraunces', serif; font-size:2.5rem; font-weight:700; color:var(--accent); line-height:1;}
 .stat-box .lbl{font-size:1rem; color:var(--ink-soft); margin-top:10px; font-weight:500;}
 
 /* values */
@@ -551,6 +558,12 @@ a.back-link--navy:hover{color:#fff;}
   font-family:'Inter', sans-serif; font-size:0.82rem; font-weight:600;
   color:var(--accent-dark); display:block; margin-bottom:10px;
 }
+/* Role label used on team cards, founder feature, and bio pages */
+.role{
+  font-family:'Inter', sans-serif; font-size:0.88rem; font-weight:600;
+  color:var(--blue-deep); display:block;
+}
+.role--gold{color:var(--accent);}
 
 /* ---------- partner list ---------- */
 .partner-row{

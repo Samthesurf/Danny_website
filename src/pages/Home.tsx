@@ -113,8 +113,8 @@ export default function Home() {
           </Reveal>
           <Reveal delay={150}>
             <img
-              src="/assets/img/ocean-conservation/hero.jpg"
-              alt="Students at an ocean conservation outreach session"
+              src="/assets/img/hydrogen-horizons/session-05.jpg"
+              alt="Attendees at DACTION's Hydrogen Horizons meetup"
               className="hero-img"
             />
           </Reveal>
@@ -204,8 +204,15 @@ export default function Home() {
             </p>
           </Reveal>
           <div className="work-strip">
-            {[...programs]
-              .sort((a, b) => a.tag.localeCompare(b.tag))
+            {[
+              'abuadmun',
+              'earth-summit',
+              'hydrogen-horizons',
+              'youth-vs-climate-change',
+              'ocean-conservation',
+            ]
+              .map((slug) => programs.find((p) => p.slug === slug))
+              .filter((p): p is (typeof programs)[number] => Boolean(p))
               .map((p, i) => (
                 <WorkThumb key={p.slug} p={p} delay={i * 90} />
               ))}
@@ -227,12 +234,13 @@ export default function Home() {
             <Reveal delay={0}>
               <div className="backed-card">
                 <div className="backed-card__logo">
-                  <span className="logo-chip" data-tooltip="Captain Planet Foundation">
+                  <span className="logo-chip logo-chip--caption" data-tooltip="Captain Planet Foundation">
                     <img
                       src="/assets/logos/captain-planet-foundation.png"
                       alt="Captain Planet Foundation logo"
                       title="Captain Planet Foundation"
                     />
+                    <span className="logo-chip__caption">Captain Planet Foundation</span>
                   </span>
                 </div>
                 <p>Atlanta, Georgia, USA</p>
