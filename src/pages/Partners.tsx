@@ -21,9 +21,9 @@ export default function Partners() {
       <section className="section--tight">
         <div className="wrap">
           <div className="bio-grid" style={{ marginTop: 14, alignItems: 'center' }}>
-            <div className="story-photo">
+            <div className="story-photo story-photo--natural">
               <img
-                src="/assets/img/ocean-conservation/hero.jpg"
+                src="/assets/img/partners/daniel-jenny-molloy.jpg"
                 alt="Daniel with Dr. Jenny Molloy, 2022"
               />
             </div>
