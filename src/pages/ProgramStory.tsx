@@ -137,20 +137,20 @@ export default function ProgramStory() {
       <section className="section section--navy">
         <div className="wrap" style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: 16 }}>
           {prev ? (
-            <Link to={`/programs/${prev.slug}`} style={{ color: '#fff', fontWeight: 600 }}>
-              &larr; {prev.title}
-            </Link>
+            <BackLink to={`/programs/${prev.slug}`} tone="navy">
+              {prev.title}
+            </BackLink>
           ) : (
             <span />
           )}
           {next ? (
-            <Link to={`/programs/${next.slug}`} style={{ color: '#fff', fontWeight: 600 }}>
-              {next.title} &rarr;
-            </Link>
+            <BackLink to={`/programs/${next.slug}`} direction="right" tone="navy">
+              {next.title}
+            </BackLink>
           ) : (
-            <Link to="/programs" style={{ color: '#fff', fontWeight: 600 }}>
+            <BackLink to="/programs" tone="navy">
               All programs
-            </Link>
+            </BackLink>
           )}
         </div>
       </section>

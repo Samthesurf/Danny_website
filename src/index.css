@@ -239,6 +239,17 @@ a.back-link .back-link__icon{
 }
 a.back-link:hover .back-link__icon{background:var(--blue); border-color:var(--blue); color:#fff; transform:translateX(-3px);}
 a.back-link:hover{color:var(--navy);}
+/* Right-facing variant: nudge the chip the other way and mirror the arrow */
+a.back-link--right:hover .back-link__icon{transform:translateX(3px);}
+a.back-link--right .back-link__icon svg{transform:scaleX(-1);}
+/* Navy-band variant (prev/next nav on the dark section under program pages) */
+a.back-link--navy{color:#E7EEF4; font-size:0.92rem;}
+a.back-link--navy .back-link__icon{
+  background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.18);
+  color:#E7EEF4;
+}
+a.back-link--navy:hover .back-link__icon{background:var(--accent); border-color:var(--accent); color:#fff}
+a.back-link--navy:hover{color:#fff;}
 
 /* ---------- photo placeholders ---------- */
 .story-hero{
