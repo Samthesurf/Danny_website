@@ -565,6 +565,14 @@ export const gallerySections: GallerySection[] = [
     moments: [
       {
         title: 'Partnership & Planning',
+        images: [
+          '/assets/img/abuadmun/promo-01.jpg',
+          '/assets/img/abuadmun/promo-02.jpg',
+          '/assets/img/abuadmun/promo-03.jpg',
+          '/assets/img/abuadmun/promo-04.jpg',
+          '/assets/img/abuadmun/promo-05.jpg',
+          '/assets/img/abuadmun/promo-06.jpg',
+        ],
         note: 'The inaugural conference takes place in November, 2026. More photos will be added here once the event has happened.',
       },
     ],

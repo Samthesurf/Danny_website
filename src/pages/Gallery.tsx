@@ -40,11 +40,12 @@ export default function Gallery() {
                         />
                       ))}
                     </div>
-                  ) : (
-                    <p style={{ marginBottom: 28, maxWidth: '60ch', color: 'var(--ink-soft)' }}>
+                  ) : null}
+                  {moment.note ? (
+                    <p style={{ marginTop: moment.images && moment.images.length > 0 ? 18 : 0, marginBottom: 28, maxWidth: '60ch', color: 'var(--ink-soft)' }}>
                       {moment.note}
                     </p>
-                  )}
+                  ) : null}
                 </div>
               ))}
             </div>
