@@ -23,6 +23,8 @@ export interface Program {
   hero?: string
   image?: string
   logo?: string
+  /** Render the hero image uncropped at its natural aspect ratio (for poster-style images). */
+  heroFit?: boolean
   storyHeadline: string
   story: string[]
   stats: ProgramStat[]
@@ -94,6 +96,7 @@ const programsBase: Program[] = [
     focus: 'Soil health, composting, sustainable food systems',
     image: '/assets/img/earth-summit/hero.jpg',
     logo: '/assets/logos/earth-summit.png',
+    heroFit: true,
     storyHeadline: 'Turning everyday waste into a solution communities can use.',
     story: [
       'Across Akure, homes, markets, and university dining halls generate large volumes of organic waste every day, while nearby farming communities struggle with declining soil fertility from erosion and nutrient loss. The two problems are directly connected: waste that could restore soil is instead treated as trash.',

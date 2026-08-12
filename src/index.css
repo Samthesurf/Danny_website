@@ -245,6 +245,12 @@ a.back-link:hover{color:var(--navy);}
   width:100%; aspect-ratio:16/8; object-fit:cover;
   border-radius:var(--radius); display:block;
 }
+/* Show the full image without cropping (for poster-style heroes like the
+   Earth Summit promo, whose key content sits at the top and bottom edges). */
+.story-hero--fit{
+  aspect-ratio:auto; height:auto; object-fit:contain;
+  width:100%; display:block; border-radius:var(--radius);
+}
 .story-logo{
   background:var(--paper); border:1px solid var(--line);
   border-radius:var(--radius); padding:22px;

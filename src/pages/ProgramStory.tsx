@@ -56,7 +56,11 @@ export default function ProgramStory() {
       <section className="section--tight">
         <div className="wrap">
           {program.image ? (
-            <img src={program.image} alt={program.title} className="story-hero" />
+            <img
+              src={program.image}
+              alt={program.title}
+              className={program.heroFit ? 'story-hero story-hero--fit' : 'story-hero'}
+            />
           ) : (
             <Placeholder variant="wide" label="Photo coming soon" />
           )}
