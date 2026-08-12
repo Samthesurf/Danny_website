@@ -95,12 +95,10 @@ export default function ProgramStory() {
                 </a>
               </p>
             )}
-            {program.logo ? (
+            {program.logo && (
               <div className="story-logo" style={{ marginTop: 24 }}>
                 <img src={program.logo} alt={`${program.title} logo`} />
               </div>
-            ) : (
-              <Placeholder variant="card" label="Photo coming soon" style={{ marginTop: 24 }} />
             )}
           </div>
         </div>
