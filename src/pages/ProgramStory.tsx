@@ -137,7 +137,7 @@ export default function ProgramStory() {
       <section className="section section--navy">
         <div className="wrap" style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: 16 }}>
           {prev ? (
-            <BackLink to={`/programs/${prev.slug}`} tone="navy">
+            <BackLink to={`/programs/${prev.slug}`} direction="left" tone="navy">
               {prev.title}
             </BackLink>
           ) : (
@@ -148,7 +148,7 @@ export default function ProgramStory() {
               {next.title}
             </BackLink>
           ) : (
-            <BackLink to="/programs" tone="navy">
+            <BackLink to="/programs" direction="right" tone="navy">
               All programs
             </BackLink>
           )}

@@ -3,24 +3,25 @@ import { Link } from 'react-router-dom'
 interface BackLinkProps {
   to: string
   children: React.ReactNode
-  /** Arrow direction. Defaults to back (left). */
+  /** Arrow direction. Defaults to right (forward). */
   direction?: 'left' | 'right'
   /** 'default' on light backgrounds; 'navy' on the dark prev/next navigation band. */
   tone?: 'default' | 'navy'
 }
 
-/** Crisp "back"/nav link with a circular arrow icon (used on program + bio detail pages). */
+/** Crisp nav link with a trailing arrow icon (used on program + bio detail pages). */
 export default function BackLink({
   to,
   children,
-  direction = 'left',
+  direction = 'right',
   tone = 'default',
 }: BackLinkProps) {
   const cls = ['back-link']
   if (tone === 'navy') cls.push('back-link--navy')
-  if (direction === 'right') cls.push('back-link--right')
+  if (direction === 'left') cls.push('back-link--left')
   return (
     <Link to={to} className={cls.join(' ')}>
+      {children}
       <span className="back-link__icon" aria-hidden="true">
         <svg
           width="14"
@@ -32,10 +33,9 @@ export default function BackLink({
           strokeLinecap="round"
           strokeLinejoin="round"
         >
-          <path d="M19 12H5M5 12l6-6M5 12l6 6" />
+          <path d="M5 12h14M19 12l-6-6M19 12l-6 6" />
         </svg>
       </span>
-      {children}
     </Link>
   )
 }
