@@ -503,7 +503,7 @@ export const partners: Partner[] = [
     since: 'Since 2022',
     description:
       "Our primary funding and program partner since 2022, based in Atlanta, Georgia. DACTION's founder also sits on the Foundation's Planeteer Alliance Wisdom Council, its global network for youth environmental leaders.",
-    logo: '/assets/logos/captain-planet-foundation.png',
+    logo: '/assets/logos/cpf-logo.png',
   },
   {
     name: 'RESWAYE',

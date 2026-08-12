@@ -234,13 +234,12 @@ export default function Home() {
             <Reveal delay={0}>
               <div className="backed-card">
                 <div className="backed-card__logo">
-                  <span className="logo-chip logo-chip--caption" data-tooltip="Captain Planet Foundation">
+                  <span className="logo-chip" data-tooltip="Captain Planet Foundation">
                     <img
-                      src="/assets/logos/captain-planet-foundation.png"
+                      src="/assets/logos/cpf-logo.png"
                       alt="Captain Planet Foundation logo"
                       title="Captain Planet Foundation"
                     />
-                    <span className="logo-chip__caption">Captain Planet Foundation</span>
                   </span>
                 </div>
                 <p>Atlanta, Georgia, USA</p>

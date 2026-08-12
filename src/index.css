@@ -352,12 +352,6 @@ a.back-link--navy:hover{color:#fff;}
   box-shadow:0 4px 14px rgba(0,0,0,0.18);
 }
 .backed-card__logo img{max-height:62px; max-width:220px; width:auto; height:auto; display:block;}
-.backed-card__logo .logo-chip--caption{gap:10px; padding:8px 14px;}
-.backed-card__logo .logo-chip--caption img{max-height:46px; max-width:150px;}
-.logo-chip__caption{
-  font-family:'Inter', sans-serif; font-size:0.82rem; font-weight:700;
-  color:var(--navy); white-space:nowrap; line-height:1.1;
-}
 .backed-card h3{color:#F5F8FA; font-size:1.18rem; margin:0;}
 .backed-card p{margin:0; color:#B9C7D6; font-size:0.94rem;}
 
@@ -581,10 +575,11 @@ a.back-link--navy:hover{color:#fff;}
 }
 .partner-row-main{display:flex; align-items:flex-start; gap:20px; flex:1; min-width:0;}
 .partner-logo{
-  width:92px; height:92px; object-fit:contain; flex-shrink:0;
+  width:auto; height:auto; max-width:150px; max-height:96px; object-fit:contain; flex-shrink:0;
   background:var(--paper); border:1px solid var(--line); border-radius:var(--radius-sm);
   padding:8px;
 }
+.partner-row-main>.partner-logo-tip{max-width:150px;}
 .partner-logo-tip{display:inline-flex; flex-shrink:0; align-items:center;}
 .partner-row:first-of-type{border-top:1px solid var(--line);}
 .partner-row .p-name{font-family:'Fraunces', serif; font-weight:600; font-size:1.2rem; color:var(--navy);}
