@@ -13,8 +13,32 @@ export default function Partners() {
           <h1 style={{ maxWidth: '18ch' }}>Who backs the work.</h1>
           <p className="lede">
             DACTION's programs are delivered in direct partnership with international foundations,
-            local organizations, and universities.
+            local organizations, and academic institutions.
           </p>
+        </div>
+      </section>
+
+      <section className="section--tight">
+        <div className="wrap">
+          <div className="bio-grid" style={{ marginTop: 14, alignItems: 'center' }}>
+            <div className="story-photo">
+              <img
+                src="/assets/img/ocean-conservation/hero.jpg"
+                alt="Daniel with Dr. Jenny Molloy, 2022"
+              />
+            </div>
+            <div>
+              <h2 style={{ maxWidth: '22ch' }}>A mentor behind the work</h2>
+              <p>
+                Dr. Jenny Molloy has mentored Daniel since they met at an ICGEB course in 2022.
+                She's a Senior Research Associate and Shuttleworth Research Fellow in the
+                Department of Chemical Engineering and Biotechnology at the University of
+                Cambridge, and she has guided Daniel's thinking on connecting engineering with
+                environmental leadership ever since, advising him informally on both his own path
+                and DACTION's direction.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 

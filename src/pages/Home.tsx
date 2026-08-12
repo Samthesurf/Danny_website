@@ -130,7 +130,7 @@ export default function Home() {
       <section className="section">
         <div className="wrap">
           <Reveal>
-            <h2 style={{ maxWidth: '24ch' }}>Why DACTION?</h2>
+            <h2 style={{ maxWidth: '24ch' }}>A small team, serious about the work.</h2>
           </Reveal>
           <div className="grid grid--3" style={{ marginTop: 32 }}>
             <Reveal delay={0}>
@@ -169,11 +169,12 @@ export default function Home() {
       <section className="section section--sand">
         <div className="wrap grid grid--2" style={{ alignItems: 'center' }}>
           <Reveal>
-            <h2 style={{ maxWidth: '20ch' }}>A founding partnership at Afe Babalola University.</h2>
+            <h2 style={{ maxWidth: '20ch' }}>A founding partnership at Daniel's own university.</h2>
             <p style={{ marginTop: 12 }}>
-              DACTION recently became a founding funding partner of ABUADMUN, a new Model United
-              Nations association at Afe Babalola University, backing it with a multi-year funding
-              commitment as it holds its first conference in November 2026.
+              DACTION helped establish ABUADMUN, a new Model United Nations association at Afe
+              Babalola University, and is now a funding and advisory partner to its annual
+              conferences, backing them with a three-year commitment starting with the first
+              conference in November 2026.
             </p>
             <Link to="/programs#abuadmun" className="btn btn--ghost">
               Read more
@@ -193,12 +194,13 @@ export default function Home() {
       <section className="section">
         <div className="wrap">
           <Reveal>
-            <h2 style={{ maxWidth: '22ch' }}>Five campaigns and counting.</h2>
+            <h2 style={{ maxWidth: '22ch' }}>Five campaigns. Three consistent interests.</h2>
             <p style={{ marginTop: 10, maxWidth: '64ch' }}>
-              From ocean conservation classrooms to a hydrogen energy meetup and an upcoming soil and
-              food-systems summit, DACTION's programs shift each year to meet the most pressing
-              environmental need in front of us, while staying rooted in the same method: youth-led,
-              community-built, honestly reported.
+              Every DACTION campaign traces back to one of three things we care about most: ocean
+              conservation, renewable energy, and sustainability in careers and business. We go
+              after the grants and opportunities that fit those interests, which is why our programs
+              range from classroom conservation drives to a hydrogen energy meetup, each one
+              designed and run by the young people drawn to that particular issue.
             </p>
           </Reveal>
           <div className="work-strip">

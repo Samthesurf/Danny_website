@@ -71,9 +71,15 @@ export default function Contact() {
 
       <section className="section section--navy">
         <div className="wrap">
-          <p className="note" style={{ color: '#C3D0DE', maxWidth: '60ch' }}>
-            Interested in partnering with DACTION, or curious about a specific campaign? Reach out
-            by email, we're always glad to talk.
+          <h2 style={{ maxWidth: '22ch', color: '#F5F8FA' }}>We're always glad to talk.</h2>
+          <p style={{ marginTop: 14, maxWidth: '66ch', color: '#B9C7D6' }}>
+            Reach out if you're interested in partnering with us, funding a campaign, or bringing
+            DACTION into your institution. Reach out if you'd like to join the team as a volunteer
+            or director, or if you're a student figuring out your own path into sustainability work
+            and want to talk it through. Reach out if you've got an opportunity, a grant, an event,
+            a collaboration, that you think we should know about, or an idea for what DACTION
+            should take on next. And reach out if you just have a question, for the organization or
+            for any member of our team specifically. However you found us, we want to hear from you.
           </p>
         </div>
       </section>
