@@ -28,7 +28,7 @@ export default function MemberBio() {
   return (
     <section className="section--tight">
       <div className="wrap">
-        <BackLink to="/team">All team members</BackLink>
+        <BackLink to="/team" direction="left">All team members</BackLink>
         <div className="bio-grid" style={{ marginTop: 24 }}>
           <div>
             {member.headshot ? (

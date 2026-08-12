@@ -35,7 +35,7 @@ export default function ProgramStory() {
     <>
       <section className="hero-simple">
         <div className="wrap">
-          <BackLink to="/programs">All programs</BackLink>
+          <BackLink to="/programs" direction="left">All programs</BackLink>
           <div style={{ marginTop: 18 }}>
             <span className={`pill-status pill-status--${program.status}`}>
               {program.statusLabel}
