@@ -329,9 +329,9 @@ const programsBase: Program[] = [
           role: 'Registration & Judging',
           headshot: '/assets/img/ocean-conservation/team/promise-ojokoh.jpg',
         },
-        { name: 'Oluwaseun Oyerinde', role: 'Registration' },
-        { name: 'Oluwatomisin Adewale', role: 'Media Coverage' },
-        { name: 'Oluwarotimi Ewulo', role: 'Media Coverage' },
+        { name: 'Oluwaseun Oyerinde', role: 'Registration', headshot: '/assets/img/ocean-conservation/team/oluwaseun-oyerinde.jpg' },
+        { name: 'Oluwatomisin Adewale', role: 'Media Coverage', headshot: '/assets/img/ocean-conservation/team/oluwatomisin-adewale.jpg' },
+        { name: 'Oluwarotimi Ewulo', role: 'Media Coverage', headshot: '/assets/img/ocean-conservation/team/oluwarotimi-ewulo.jpg' },
         {
           name: 'Faith Melodi',
           role: 'Media Coverage',
@@ -342,7 +342,7 @@ const programsBase: Program[] = [
           role: 'Judge',
           headshot: '/assets/img/ocean-conservation/team/oluwanifemi-olajuyigbe.jpg',
         },
-        { name: 'Victor Arum', role: 'Judge' },
+        { name: 'Victor Arum', role: 'Judge', headshot: '/assets/img/ocean-conservation/team/victor-arum.jpg' },
         {
           name: 'Olumide Olubosede',
           role: 'Judge',
