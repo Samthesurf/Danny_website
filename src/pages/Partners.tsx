@@ -57,7 +57,7 @@ export default function Partners() {
               />
             </div>
             <div>
-              <h2 style={{ maxWidth: '22ch' }}>A mentor behind the work</h2>
+              <h2 style={{ maxWidth: '22ch' }}>The mentor behind the work</h2>
               <p>
                 Dr. Jenny Molloy has mentored Daniel since they met at an ICGEB course in 2022.
                 She's a Senior Research Associate and Shuttleworth Research Fellow in the
