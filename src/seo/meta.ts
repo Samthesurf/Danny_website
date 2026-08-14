@@ -48,13 +48,14 @@ const memberBySlug = new Map(teamMembers.map((m) => [m.slug, m]))
 export function getHead(path: string): RouteHead {
   const clean = path === '/' ? '/' : path.replace(/\/+$/, '') || '/'
   const suffix = ` | ${SITE.name}`
+  const canonicalPath = clean === '/' ? '/' : `${clean}/`
 
   // program detail
   if (clean.startsWith('/programs/')) {
     const slug = clean.split('/programs/')[1]
     const prog = slug ? programBySlug.get(slug) : undefined
     if (prog) {
-      return make(clean, {
+      return make(canonicalPath, {
         title: `${prog.title}${suffix}`,
         description: prog.blurb,
         ogType: 'article',
@@ -76,7 +77,7 @@ export function getHead(path: string): RouteHead {
     const slug = clean.split('/team/')[1]
     const member = slug ? memberBySlug.get(slug) : undefined
     if (member) {
-      return make(clean, {
+      return make(canonicalPath, {
         title: `${member.name} - ${member.role}${suffix}`,
         description: `${member.name} is ${member.role.toLowerCase()} at ${SITE.name}. ${member.blurb}`,
         ogType: 'article',
@@ -88,42 +89,42 @@ export function getHead(path: string): RouteHead {
 
   switch (clean) {
     case '/':
-      return make(clean, {
+      return make(canonicalPath, {
         title: `${SITE.name} | Youth-Led Environmental Action, Nigeria`,
         description: SITE.shortDescription,
       })
     case '/about':
-      return make(clean, {
+      return make(canonicalPath, {
         title: `About ${SITE.name}${suffix}`,
         description: `${SITE.name} - history, mission, and impact of a youth-led environmental nonprofit in Lekki, Lagos, Nigeria. Founded by Daniel Olajuyigbe in 2022.`,
         keywords: ['About DACTION', 'DACTION history', 'DACTION mission'],
       })
     case '/programs':
-      return make(clean, {
+      return make(canonicalPath, {
         title: `Programs & Campaigns${suffix}`,
         description: `${SITE.name}'s programs: beach cleanups, tree planting, school recycling education, and a hydrogen energy summit across Nigeria.`,
         keywords: ['DACTION programs', 'DACTION campaigns', 'youth climate programs Nigeria'],
       })
     case '/gallery':
-      return make(clean, {
+      return make(canonicalPath, {
         title: `Gallery${suffix}`,
         description: `Photos from ${SITE.name} programs and cleanup campaigns across Nigeria.`,
         keywords: ['DACTION photos', 'DACTION gallery', 'environmental campaign photos'],
       })
     case '/team':
-      return make(clean, {
+      return make(canonicalPath, {
         title: `Team${suffix}`,
         description: `Meet the ${SITE.name} team - youth leaders running environmental programs across Nigeria, led by founder Daniel Olajuyigbe.`,
         keywords: ['DACTION team', 'DACTION volunteers', 'Daniel Olajuyigbe'],
       })
     case '/partners':
-      return make(clean, {
+      return make(canonicalPath, {
         title: `Partners & Recognition${suffix}`,
         description: `The funders and partners behind ${SITE.name}: Captain Planet Foundation, ThinkOcean, and RESWAYE.`,
         keywords: ['DACTION partners', 'Captain Planet Foundation Nigeria', 'DACTION funding'],
       })
     case '/contact':
-      return make(clean, {
+      return make(canonicalPath, {
         title: `Contact ${SITE.name}${suffix}`,
         description: `Get in touch with ${SITE.name}, a youth-led environmental nonprofit based in Lekki, Lagos, Nigeria.`,
         keywords: ['Contact DACTION', 'DACTION email', 'partner with DACTION'],

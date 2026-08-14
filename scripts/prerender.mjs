@@ -154,7 +154,7 @@ async function main() {
     const urlTags = routes
       .map(
         (r) => `  <url>
-    <loc>${abs(r.path)}</loc>
+    <loc>${r.path === '/' ? abs('/') : abs(r.path) + '/'}</loc>
     <lastmod>${TODAY.slice(0, 10)}</lastmod>
     <changefreq>${r.freq}</changefreq>
     <priority>${r.priority.toFixed(1)}</priority>
