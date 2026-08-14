@@ -4,36 +4,82 @@
  * Runs automatically after `npm run deploy` via the "postdeploy" hook.
  * Reads the full URL list from the live sitemap so every page is covered.
  * Best-effort: a failure must never block a deploy.
+ *
+ * Uses node:https with family:4 (IPv4) instead of fetch because this machine
+ * has broken IPv6 and undici's fetch does not reliably honour
+ * NODE_OPTIONS=--dns-result-order=ipv4first.
  */
+import https from 'node:https'
+
 const SITE_URL = 'https://dactioninitiative.com'
 const INDEXNOW_KEY = '3339cc3c57c13129b2dc284e6fd3f312'
 const INDEXNOW_ENDPOINT = 'https://api.indexnow.org/indexnow'
 const SITEMAP_URL = `${SITE_URL}/sitemap.xml`
 
+/** Minimal IPv4-forced HTTPS request helper. */
+function request(url, { method = 'GET', headers = {}, body } = {}) {
+  return new Promise((resolve, reject) => {
+    const u = new URL(url)
+    const req = https.request(
+      {
+        hostname: u.hostname,
+        path: `${u.pathname}${u.search}`,
+        method,
+        headers,
+        family: 4,
+      },
+      (res) => {
+        let data = ''
+        res.on('data', (c) => (data += c))
+        res.on('end', () =>
+          resolve({
+            ok: res.statusCode >= 200 && res.statusCode < 300,
+            status: res.statusCode,
+            body: data,
+          }),
+        )
+      },
+    )
+    req.on('error', reject)
+    if (body) req.write(body)
+    req.end()
+  })
+}
+
 async function fetchSitemapUrls() {
-  const res = await fetch(SITEMAP_URL, { redirect: 'follow' })
+  const res = await request(SITEMAP_URL, {
+    headers: { 'User-Agent': 'daction-indexnow-bot/1.0' },
+  })
   if (!res.ok) throw new Error(`sitemap request failed: HTTP ${res.status}`)
-  const xml = await res.text()
   const urls = []
   const re = /<loc>([^<]+)<\/loc>/g
   let m
-  while ((m = re.exec(xml)) !== null) {
+  while ((m = re.exec(res.body)) !== null) {
     const u = m[1].trim()
-    try { if (new URL(u).hostname === new URL(SITE_URL).hostname) urls.push(u) } catch {}
+    try {
+      if (new URL(u).hostname === new URL(SITE_URL).hostname) urls.push(u)
+    } catch {
+      // ignore malformed
+    }
   }
   return urls
 }
 
 async function main() {
   let urls
-  try { urls = await fetchSitemapUrls() } catch (err) {
+  try {
+    urls = await fetchSitemapUrls()
+  } catch (err) {
     console.error(`[indexnow] could not read sitemap: ${err.message}`)
     process.exitCode = 1
     return
   }
-  if (urls.length === 0) { console.log('[indexnow] no URLs, skipping.'); return }
+  if (urls.length === 0) {
+    console.log('[indexnow] no URLs, skipping.')
+    return
+  }
 
-  const res = await fetch(INDEXNOW_ENDPOINT, {
+  const res = await request(INDEXNOW_ENDPOINT, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json; charset=utf-8' },
     body: JSON.stringify({
@@ -46,8 +92,7 @@ async function main() {
   if (res.ok) {
     console.log(`[indexnow] submitted ${urls.length} URL(s) - HTTP ${res.status} OK`)
   } else {
-    const detail = await res.text().catch(() => '')
-    console.error(`[indexnow] IndexNow failed - HTTP ${res.status} ${detail}`)
+    console.error(`[indexnow] IndexNow failed - HTTP ${res.status} ${res.body.slice(0, 200)}`)
   }
 }
 
