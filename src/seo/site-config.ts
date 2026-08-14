@@ -28,7 +28,7 @@ export const SITE = {
   shortDescription:
     'DACTION Initiative is a youth-led environmental nonprofit based in Lekki, Lagos, Nigeria, running conservation, clean energy, and community education programs across Nigeria.',
   longDescription:
-    'DACTION Initiative is a youth-led environmental nonprofit founded in 2022 by Daniel Olajuyigbe and based in Lekki, Lagos, Nigeria. It runs hands-on conservation, clean energy, and community education programs - including beach cleanups, tree planting, school recycling education, and a hydrogen energy summit - across Lagos, Ondo, and Ogun States. DACTION is a five-time internationally funded organization, backed by the Captain Planet Foundation and ThinkOcean, with delivery partner RESWAYE.',
+    'DACTION Initiative is a youth-led environmental nonprofit founded in 2022 by Daniel Olajuyigbe and based in Lekki, Lagos, Nigeria. It runs hands-on conservation, clean energy, and community education programs - including beach cleanups, tree planting, school recycling education, and a hydrogen energy summit - across Lagos and Ondo States. DACTION is a five-time internationally funded organization, backed by the Captain Planet Foundation and ThinkOcean, with delivery partner RESWAYE.',
   founder: {
     name: 'Daniel Olajuyigbe',
     role: 'Founder & Executive Director',

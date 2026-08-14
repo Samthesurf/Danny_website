@@ -12,7 +12,7 @@
 - Type: Youth-led environmental nonprofit (501c3-style volunteer org, Nigerian registered)
 - Founded: 2022
 - Founder and Executive Director: Daniel Olajuyigbe
-- Location: Chevy View Estate, Chevron Drive, Lekki, Lagos, Nigeria (programs across Lagos, Ondo, and Ogun States)
+- Location: Chevy View Estate, Chevron Drive, Lekki, Lagos, Nigeria (programs across Lagos and Ondo States)
 - Canonical URL: https://dactioninitiative.com
 - Contact: dactioninitiative@gmail.com
 - Instagram: https://www.instagram.com/daction_initiative/
@@ -20,14 +20,14 @@
 
 ## One-paragraph description
 
-DACTION Initiative is a youth-led environmental nonprofit founded in 2022 by Daniel Olajuyigbe and based in Lekki, Lagos, Nigeria. It designs and delivers hands-on conservation, clean energy, and community education programs - including beach cleanups, tree planting, school recycling education, and a hydrogen energy summit - across Lagos, Ondo, and Ogun States. It is a five-time internationally funded organization, backed by grants from the Captain Planet Foundation and ThinkOcean, with RESWAYE as its on-the-ground delivery partner.
+DACTION Initiative is a youth-led environmental nonprofit founded in 2022 by Daniel Olajuyigbe and based in Lekki, Lagos, Nigeria. It designs and delivers hands-on conservation, clean energy, and community education programs - including beach cleanups, tree planting, school recycling education, and a hydrogen energy summit - across Lagos and Ondo States. It is a five-time internationally funded organization, backed by grants from the Captain Planet Foundation and ThinkOcean, with RESWAYE as its on-the-ground delivery partner.
 
 ## Impact highlights
 
 - $4,000+ raised in competitively won grants
 - 500+ students reached directly in schools
 - 4 flagship campaigns delivered
-- 3 Nigerian states reached
+- 2 Nigerian states reached
 - 5 internationally competitive grants won
 
 ## Programs and campaigns

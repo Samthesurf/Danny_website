@@ -623,7 +623,7 @@ export const impactStats: { num: string; label: string }[] = [
   { num: '$4,000+', label: 'in competitively won grants' },
   { num: '500+', label: 'students reached directly' },
   { num: '4', label: 'flagship campaigns delivered' },
-  { num: '3', label: 'Nigerian states reached' },
+  { num: '2', label: 'Nigerian states reached' },
 ]
 
 export const siteNav: { to: string; label: string }[] = [
