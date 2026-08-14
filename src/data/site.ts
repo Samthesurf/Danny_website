@@ -494,19 +494,19 @@ export interface Recognition {
 export const recognition: Recognition[] = [
   {
     year: '2026',
-    text: 'Summit Grant, Captain Planet Foundation, awarded to fund the DACTION Earth Summit.',
+    text: "The foundation's Summit Grant funds the DACTION Earth Summit at FUTA in Akure: a full day where roughly 100 students sit and work alongside informal youth waste workers, on soil health, composting, and how food systems connect the two.",
   },
   {
     year: '2025',
-    text: 'Meetup grant, Captain Planet Foundation, awarded to fund FIRE Meetup: Hydrogen Horizons.',
+    text: "A Meetup grant backed FIRE Meetup: Hydrogen Horizons, a hybrid session in Lekki that put an NNPC executive and researchers from three countries in front of Nigerian students to work out where hydrogen fits in the country's energy future.",
   },
   {
     year: '2024',
-    text: 'Season of Solutions Grant, Captain Planet Foundation, awarded to fund Youth vs. Climate Change.',
+    text: "Youth vs. Climate Change ran on the foundation's Season of Solutions Grant. Cleanups covered five popular beaches in the Lekki area, with beach owners and visitors engaged in the process rather than worked around. DACTION also planted trees at a public secondary school there, doubling the original planting target.",
   },
   {
     year: '2022',
-    text: 'Campaign Grant, Captain Planet Foundation, awarded to fund Ocean Conservation from the Classroom.',
+    text: "Where it started. A Campaign Grant paid for DACTION's first ever campaign, ocean conservation education across five schools in Akure. Each school left with its own recycling bins and a place in an ongoing recycling network through RESWAYE. Students entered an artivism competition, and the winners read their work aloud on stage at a government hall event.",
   },
 ]
 

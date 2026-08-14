@@ -72,7 +72,7 @@ export default function Partners() {
 
       <section className="section section--alt">
         <div className="wrap">
-          <h2 style={{ maxWidth: '24ch' }}>Milestones earned along the way.</h2>
+          <h2 style={{ maxWidth: '24ch' }}>The work keeps earning trust.</h2>
 
           <div className="grid grid--2" style={{ marginTop: 30 }}>
             {recognition.map((r) => (
