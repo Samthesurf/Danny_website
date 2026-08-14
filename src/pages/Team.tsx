@@ -48,7 +48,7 @@ export default function Team() {
                 <span className="role role--gold">{founder.role}</span>
                 <p style={{ maxWidth: '56ch' }}>{founder.blurb}</p>
                 <span className="link-arrow" style={{ color: 'var(--blue-deep)' }}>
-                  Read Daniel's full story &rarr;
+                  Read Daniel's bio &rarr;
                 </span>
               </div>
             </Link>
