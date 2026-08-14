@@ -50,39 +50,9 @@ const storyOrder = [
   'youth-vs-climate-change',
   'hydrogen-horizons',
   'earth-summit',
-  'abuadmun',
 ]
 
 const programsBase: Program[] = [
-  {
-    slug: 'abuadmun',
-    id: 'abuadmun',
-    tag: '2026 · Upcoming',
-    title: 'ABUADMUN Conference Partnership',
-    blurb:
-      "DACTION's first institutional funding partnership, backing a new Model United Nations association at Daniel's alma mater with a three-year commitment.",
-    status: 'upcoming',
-    statusLabel: 'Upcoming, November 2026',
-    location: 'Afe Babalola University, Ado-Ekiti',
-    focus: 'Youth diplomacy & institutional partnership',
-    image: '/assets/logos/abuadmun-partnership.png',
-    logo: '/assets/logos/abuadmun.png',
-    storyHeadline: 'Backing the first Model UN at Daniel\u2019s own university.',
-    story: [
-      'In his final undergraduate semester, Daniel worked alongside Adebolu Alayonimi, head of ABUADMUN\u2019s local organizing committee, to help establish ABUADMUN as an organization and secure formal university approval for it, Afe Babalola University\u2019s first Model United Nations association. A Model UN simulates the structure and debate of the real United Nations, giving students practice in diplomacy, negotiation, public speaking, and policy writing.',
-      'DACTION is a funding and advisory partner to ABUADMUN\u2019s annual conferences, the two-day UN simulation delegate events the association runs each year, committing three years of funding support alongside ongoing advisory and consulting input as it plans its inaugural conference for November 2026 at Alfa Belgore Hall on the ABUAD campus, expecting around 200 student delegates and staff.',
-      "It's DACTION's first partnership of this kind: supporting an institution's flagship event rather than running a campaign directly, and a sign of the organization's work extending into new kinds of youth leadership beyond environmental programming.",
-    ],
-    stats: [
-      { num: '200', label: 'delegates expected' },
-      { num: '2', label: 'days of conference programming' },
-    ],
-    tags: [
-      'Three-year funding commitment',
-      'Funding & advisory partner',
-      'Aligned with SDG 4 and SDG 16',
-    ],
-  },
   {
     slug: 'earth-summit',
     id: 'earth-summit',
@@ -197,10 +167,6 @@ const programsBase: Program[] = [
       { num: '21', label: 'artivism event participants' },
     ],
     tags: ['Funded by Captain Planet Foundation', 'Delivery support: RESWAYE'],
-    featureLink: {
-      url: 'https://captainplanetfoundation.org/youth-vs-climate-change-in-lekki-lagos-nigeria/',
-      label: 'Read the published feature on the Captain Planet Foundation site',
-    },
     people: {
       heading: 'Who ran the campaign',
       people: [
@@ -337,6 +303,8 @@ export interface TeamMember {
   note?: string
   /** Headshot photo path. */
   headshot?: string
+  /** Optional framed square avatar (used for the circular team card); falls back to headshot. */
+  avatar?: string
   /** Secondary "at work" photo path. */
   work?: string
 }
@@ -351,13 +319,13 @@ export const teamMembers: TeamMember[] = [
     headshot: '/assets/img/team/daniel-olajuyigbe/headshot.jpg',
     work: '/assets/img/team/daniel-olajuyigbe/work.jpg',
     bio: [
-      'Daniel Olajuyigbe is a First Class graduate in Aeronautical and Astronautical Engineering from Afe Babalola University and the founder of DACTION Initiative, an environmental nonprofit he built as an undergraduate during his teenage years and has since grown into a five-time internationally funded organization.',
-      'His engineering training centers on combustion and energy systems. His undergraduate thesis focused on the design and computational evaluation of a low-NOx hydrogen micro-injector for small gas turbine combustion, and his undergraduate research work involved running CFD simulations in ANSYS Fluent to study hydrogen-air mixing, flow distribution, and emissions performance in gas turbine combustors. He has completed three industrial placements, two with Aero Contractors Company of Nigeria and one with the Nigerian Air Force\u2019s 631 Aircraft Maintenance Depot, gaining hands-on exposure to propulsion, hydraulics, structural inspection, and avionics within safety-critical maintenance environments. He is now looking toward aviation, energy systems, and consulting, carrying that same combustion and thermofluids foundation into whichever of those paths he builds his career in.',
-      "Daniel's path into environmental leadership began early. At fifteen he won the Turtle Prize from Mundus Maris Science and Arts for Sustainability in Belgium, and the following year took Silver in the Queen's Commonwealth Essay Competition. Through his late teens he wrote for the ThinkOcean Blog and served as a Commonwealth Correspondent for YourCommonwealth, then in 2021 was selected to the Captain Planet Foundation's Planeteer Alliance Design Squad, a global youth team assembled to help design and launch the newly formed Alliance. He led the team's Project 3, developing a formal proposal for the Alliance's leadership and governance structure, work that would later open the door to his current seat on the Foundation's Planeteer Alliance Wisdom Council, a small rotating body of young environmental leaders advising on program strategy for the Foundation's global youth network.",
-      'Since founding DACTION in 2022, Daniel has led it to five internationally competitive grants worth over $4,000 from the Captain Planet Foundation and ThinkOcean, building volunteer teams to execute each campaign, forming lasting partnerships including a multi-year collaboration with RESWAYE, and helping secure university approval to establish ABUADMUN, a new Model United Nations association DACTION has committed five years of funding to support. He also founded ThinkOcean\u2019s first Nigerian chapter and served two years as its National Coordinator before handing leadership to a successor.',
-      'On campus, Daniel served as General Secretary of the Nigerian Universities Engineering Students\u2019 Association (NUESA), ABUAD chapter, where he administered the executive secretariat and chaired both the Academic and Financial Committees, managing budgets, sponsorship acquisition, and technical programming for a body of over 1,500 engineering students, work recognized with an Award of Service. Before that, as General Secretary of ABUAD Salt Valley Associates, he coordinated executive communications and delivered flagship student events including engineering design challenges and technical workshops. He has also worked as an Outreach Representative for Nigeria\u2019s Rise Scholarship Program, mentoring over 300 students across 100+ schools through the scholarship application process.',
-      "His recognition includes the Captain Planet Foundation's EARTH Summit Grant, FIRE Meetup Grant, Season of Solutions Grant, and Campaign Grant, ABUAD's Founder's Award for First Class academic performance across three consecutive years, an Award of Service from NUESA, a Silver Award in the Queen's Commonwealth Essay Competition, and the Turtle Prize from Mundus Maris Science and Arts for Sustainability.",
-      "What genuinely drives Daniel is the idea that sustainability has to be built into how careers and businesses actually operate, not treated as a side project, if it's going to produce lasting change. He's currently focused on learning, professionally, how that plays out in practice: how businesses design and execute real sustainability strategy and incorporate ESG into how they operate, how oil and gas operations can run at maximum efficiency with minimal waste and strict environmental compliance, and how renewable alternatives, hydrogen especially, can be developed alongside that push for efficiency rather than instead of it. Just as much, he's drawn to the process behind all of it: spotting real gaps and problems in society, designing solutions for them, and bringing together young people capable of building those solutions, then investing in them, working alongside them, and pushing the resulting advocacy through to actual impact. That combination, technical rigor on one side and youth-led problem-solving on the other, is what he's building his career around.",
+      'Daniel Olajuyigbe is a First Class graduate in Aeronautical and Astronautical Engineering from Afe Babalola University and the founder of DACTION Initiative, an environmental nonprofit he built as a teenager and has since grown into a five-time internationally funded organization.',
+      'His engineering training centers on combustion and energy systems. His undergraduate thesis focused on the design and computational evaluation of a low-NOx hydrogen micro-injector for small gas turbine combustion, backed by CFD simulations in ANSYS Fluent studying hydrogen-air mixing and emissions performance. He completed industrial placements at Aero Contractors Company of Nigeria and the Nigerian Air Force, gaining hands-on exposure to propulsion, hydraulics, and avionics within safety-critical environments. He now applies that foundation across aviation, energy systems, and consulting.',
+      "Daniel's path into environmental leadership began early. At fifteen he won the Turtle Prize from Mundus Maris Science and Arts for Sustainability in Belgium, and the following year took Silver in the Queen's Commonwealth Essay Competition. He wrote for the ThinkOcean Blog and served as a Commonwealth Correspondent for YourCommonwealth, before being selected in 2021 to the Captain Planet Foundation's Planeteer Alliance Design Squad, an international team assembled to help build and launch it. He steered the team's work on a formal proposal for the Alliance's governance structure, a role that later opened the door to his current seat on the Foundation's Planeteer Alliance Wisdom Council, advising on program strategy for its global network.",
+      'Since founding DACTION in 2022, Daniel has led it to five internationally competitive grants worth over $4,000 from the Captain Planet Foundation and ThinkOcean, built volunteer teams for each campaign, and formed a multi-year partnership with RESWAYE. He also founded ThinkOcean\'s first Nigerian chapter and served as National Coordinator.',
+      'On campus, Daniel served as General Secretary of the Nigerian Universities Engineering Students\u2019 Association (NUESA), ABUAD chapter, chairing the Academic and Financial Committees and managing budgets, sponsorship, and technical programming for over 1,500 engineering students, work recognized with an Award of Service. Before that, as General Secretary of ABUAD Salt Valley Associates, he coordinated executive communications and delivered flagship student events. He also served as Meto\'s Outreach Representative for Nigeria on the Rise Scholarship Program, mentoring over 300 students across 100+ schools.',
+      "What genuinely drives Daniel is the belief that sustainability has to be built into how careers and businesses operate, not treated as a side project. He's focused on how businesses design real sustainability and ESG strategy, how existing oil and gas operations can cut waste and emissions during the transition to cleaner alternatives, and how that work can go hand in hand with developing renewables, hydrogen especially.",
+      "Just as much, he's drawn to the process behind it all: spotting real gaps, designing solutions, and bringing together young people capable of building them.",
       'Outside of engineering and DACTION, Daniel is an avid reader of psychology, philosophy, and history, drawn especially to books on faith, and he loves a good debate.',
     ],
   },
@@ -416,6 +384,7 @@ export const teamMembers: TeamMember[] = [
     blurb:
       'Owns budgeting for every campaign, tracks spending, and ensures grant funds are allocated and accounted for properly.',
     headshot: '/assets/img/team/ayooluwa-sunmonu/headshot.jpg',
+    avatar: '/assets/img/team/ayooluwa-sunmonu/avatar.jpg',
     work: '/assets/img/team/ayooluwa-sunmonu/work.jpg',
     bio: [
       'Ayooluwa Sunmonu is an undergraduate at Afe Babalola University who owns budgeting for every DACTION campaign, tracking spending and ensuring grant funds are allocated and accounted for properly.',
@@ -512,13 +481,6 @@ export const partners: Partner[] = [
       "The Recycling Scheme for Women and Youth Empowerment has been DACTION's delivery partner on the ground in Lagos and Ondo States since our first campaign, supporting cleanups, school programs, and community venues.",
     logo: '/assets/logos/reswaye.png',
   },
-  {
-    name: 'ABUADMUN',
-    since: 'Since 2026',
-    description:
-      "DACTION helped establish the Afe Babalola University Model United Nations and now serves as a funding and advisory partner to its annual conferences, backed by a three-year commitment.",
-    logo: '/assets/logos/abuadmun.png',
-  },
 ]
 
 export interface Recognition {
@@ -560,31 +522,12 @@ export interface GallerySection {
 
 export const gallerySections: GallerySection[] = [
   {
-    id: 'gallery-abuadmun',
-    title: 'ABUADMUN Conference Partnership, 2026',
-    moments: [
-      {
-        title: 'Partnership & Planning',
-        images: [
-          '/assets/img/abuadmun/promo-01.jpg',
-          '/assets/img/abuadmun/promo-02.jpg',
-          '/assets/img/abuadmun/promo-03.jpg',
-          '/assets/img/abuadmun/promo-04.jpg',
-          '/assets/img/abuadmun/promo-05.jpg',
-          '/assets/img/abuadmun/promo-06.jpg',
-        ],
-        note: 'The inaugural conference takes place in November, 2026. More photos will be added here once the event has happened.',
-      },
-    ],
-  },
-  {
     id: 'gallery-earth-summit',
     title: 'DACTION Earth Summit, 2026',
     moments: [
       {
         title: 'Summit promotions',
         images: [
-          '/assets/img/earth-summit/hero.jpg',
           '/assets/img/earth-summit/poster-01.jpg',
           '/assets/img/earth-summit/poster-02.jpg',
           '/assets/img/earth-summit/poster-03.jpg',
@@ -672,12 +615,6 @@ export interface TimelineItem {
 
 export const timeline: TimelineItem[] = [
   {
-    year: '2026 · Institutional partnership',
-    title: 'Funding and advisory partner to ABUADMUN',
-    text:
-      'DACTION helped establish ABUADMUN as an organization and is now a funding and advisory partner to its annual conferences, backed by a three-year commitment starting with the first conference in November 2026.',
-  },
-  {
     year: '2026 · Soil systems',
     title: 'DACTION Earth Summit: Compost, Cultivate, Conserve',
     text:
@@ -706,7 +643,7 @@ export const timeline: TimelineItem[] = [
 export const impactStats: { num: string; label: string }[] = [
   { num: '$4,000+', label: 'in competitively won grants' },
   { num: '500+', label: 'students reached directly' },
-  { num: '5', label: 'flagship campaigns delivered' },
+  { num: '4', label: 'flagship campaigns delivered' },
   { num: '3', label: 'Nigerian states reached' },
 ]
 
@@ -721,7 +658,6 @@ export const siteNav: { to: string; label: string }[] = [
 
 export const CONTACT = {
   orgEmail: 'dactioninitiative@gmail.com',
-  founderEmail: 'dannyolaj@gmail.com',
   instagram: 'https://www.instagram.com/daction_initiative/',
   linkedin: 'https://www.linkedin.com/in/daniel-olajuyigbe/',
   linkedinCompany: 'https://www.linkedin.com/company/daction-initiative',

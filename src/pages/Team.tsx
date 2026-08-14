@@ -58,12 +58,14 @@ export default function Team() {
             {directors.map((member) => (
               <Link to={`/team/${member.slug}`} className="team-card" key={member.slug}>
                 {member.headshot ? (
-                  <img
-                    src={member.headshot}
-                    alt={`Portrait of ${member.name}`}
-                    className="team-card__img"
-                    loading="lazy"
-                  />
+                  <div className={`team-card__avatar team-card__avatar--${member.slug}`}>
+                    <img
+                      src={member.avatar ?? member.headshot}
+                      alt={`Portrait of ${member.name}`}
+                      className={`team-card__img team-card__img--${member.slug}`}
+                      loading="lazy"
+                    />
+                  </div>
                 ) : (
                   <Placeholder variant="portrait" label="Photo coming soon" />
                 )}

@@ -14,7 +14,7 @@ export default function Programs() {
         <div className="wrap">
           <h1 style={{ maxWidth: '16ch' }}>Our work, campaign by campaign.</h1>
           <p className="lede">
-            Five flagship programs so far, shown most recent first. Each has its own page with the
+            Four flagship programs so far, shown most recent first. Each has its own page with the
             full story, what we set out to do, and what actually happened.
           </p>
         </div>

@@ -87,9 +87,26 @@ function WorkThumb({ p, delay }: { p: (typeof programs)[number]; delay: number }
 }
 
 export default function Home() {
+  const [posterOpen, setPosterOpen] = useState(false)
+
   useEffect(() => {
     document.title = 'DACTION Initiative | Youth-Led Environmental Action, Nigeria'
   }, [])
+
+  // Close the podcast flyer lightbox on Escape and lock body scroll while open.
+  useEffect(() => {
+    if (!posterOpen) return
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setPosterOpen(false)
+    }
+    const prevOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    window.addEventListener('keydown', handleKeyDown)
+    return () => {
+      document.body.style.overflow = prevOverflow
+      window.removeEventListener('keydown', handleKeyDown)
+    }
+  }, [posterOpen])
 
   return (
     <>
@@ -169,24 +186,38 @@ export default function Home() {
       <section className="section section--sand">
         <div className="wrap grid grid--2" style={{ alignItems: 'center' }}>
           <Reveal>
-            <h2 style={{ maxWidth: '20ch' }}>A founding partnership at Daniel's own university.</h2>
+            <h2 style={{ maxWidth: '20ch' }}>Daniel on the "Pending the Bar" podcast.</h2>
             <p style={{ marginTop: 12 }}>
-              DACTION helped establish ABUADMUN, a new Model United Nations association at Afe
-              Babalola University, and is now a funding and advisory partner to its annual
-              conferences, backing them with a three-year commitment starting with the first
-              conference in November 2026.
+              Daniel's first podcast appearance, on the ABUAD Law Students' Society's "Pending the
+              Bar, How-To Series," breaks down the Sustainable Development Goals in practical
+              terms: how to find the goals you actually care about, how to start with no prior
+              experience, how to align them with a career path, and how that path led to founding
+              DACTION. The 45-minute episode also covers how to find opportunities, apply for
+              grants, and turn ideas into real projects.
             </p>
-            <Link to="/programs#abuadmun" className="btn btn--ghost">
-              Read more
-            </Link>
+            <a
+              href="https://open.spotify.com/episode/0Rldj1H7E8Jo3OBBcW3EkY"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn--ghost"
+            >
+              Listen on Spotify
+            </a>
           </Reveal>
           <Reveal delay={150}>
-            <div className="home-partner-logo">
+            <button
+              type="button"
+              className="podcast-poster-btn"
+              onClick={() => setPosterOpen(true)}
+              aria-label="View full Pending the Bar podcast flyer"
+            >
               <img
-                src="/assets/logos/abuadmun-partnership.png"
-                alt="DACTION x ABUADMUN partnership logo"
+                src="/assets/img/daniel-podcast-lss.jpg"
+                alt="Pending the Bar podcast flyer featuring Daniel Olajuyigbe"
+                className="podcast-poster"
+                loading="lazy"
               />
-            </div>
+            </button>
           </Reveal>
         </div>
       </section>
@@ -194,7 +225,7 @@ export default function Home() {
       <section className="section">
         <div className="wrap">
           <Reveal>
-            <h2 style={{ maxWidth: '22ch' }}>Five campaigns. Three consistent interests.</h2>
+            <h2 style={{ maxWidth: '22ch' }}>Four campaigns. Three consistent interests.</h2>
             <p style={{ marginTop: 10, maxWidth: '64ch' }}>
               Every DACTION campaign traces back to one of three things we care about most: ocean
               conservation, renewable energy, and sustainability in careers and business. We go
@@ -205,7 +236,6 @@ export default function Home() {
           </Reveal>
           <div className="work-strip">
             {[
-              'abuadmun',
               'earth-summit',
               'hydrogen-horizons',
               'youth-vs-climate-change',
@@ -255,16 +285,6 @@ export default function Home() {
                 <p>Lagos, Nigeria</p>
               </div>
             </Reveal>
-            <Reveal delay={240}>
-              <div className="backed-card">
-                <div className="backed-card__logo">
-                  <span className="logo-chip" data-tooltip="ABUADMUN">
-                    <img src="/assets/logos/abuadmun.png" alt="ABUADMUN logo" title="ABUADMUN" />
-                  </span>
-                </div>
-                <p>Ekiti State, Nigeria</p>
-              </div>
-            </Reveal>
           </div>
           <Reveal delay={200}>
             <Link to="/partners" className="btn btn--accent" style={{ marginTop: 26, display: 'inline-block' }}>
@@ -273,6 +293,43 @@ export default function Home() {
           </Reveal>
         </div>
       </section>
+
+      {posterOpen && (
+        <div
+          className="lightbox-backdrop"
+          onClick={() => setPosterOpen(false)}
+          role="dialog"
+          aria-modal="true"
+          aria-label="Pending the Bar podcast flyer"
+        >
+          <button
+            type="button"
+            className="lightbox-close"
+            onClick={() => setPosterOpen(false)}
+            aria-label="Close full view"
+          >
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true">
+              <path
+                d="M5 5l14 14M19 5L5 19"
+                stroke="currentColor"
+                strokeWidth="2.4"
+                strokeLinecap="round"
+              />
+            </svg>
+          </button>
+          <div className="lightbox-dialog" onClick={(e) => e.stopPropagation()}>
+            <img
+              src="/assets/img/daniel-podcast-lss.jpg"
+              alt="Pending the Bar podcast flyer featuring Daniel Olajuyigbe"
+              className="lightbox-img"
+            />
+            <div className="lightbox-caption">
+              <span>Pending the Bar, How-To Series</span>
+              <span className="lightbox-counter">Episode One: SDGs with Daniel Olajuyigbe</span>
+            </div>
+          </div>
+        </div>
+      )}
     </>
   )
 }

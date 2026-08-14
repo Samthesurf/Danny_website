@@ -53,9 +53,6 @@ export default function Contact() {
               First Class Honours, Afe Babalola University
             </p>
             <p style={{ marginTop: 16 }}>
-              <a href={`mailto:${CONTACT.founderEmail}`}>{CONTACT.founderEmail}</a>
-            </p>
-            <p>
               <a href={CONTACT.linkedin} target="_blank" rel="noopener">
                 LinkedIn profile &rarr;
               </a>

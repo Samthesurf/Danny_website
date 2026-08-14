@@ -110,9 +110,7 @@ export default function About() {
                   best. Coastal cleanups and reforestation in Lekki followed in 2024. An energy
                   dialogue on hydrogen's place in Nigeria's future came in 2025, pulling in an NNPC
                   executive and international researchers from Germany and Canada. Now, DACTION is
-                  preparing a soil and food-systems summit at a Nigerian university, and has taken on
-                  its first institutional funding commitment, backing a new Model United Nations
-                  association at Daniel's alma mater.
+                  preparing a soil and food-systems summit at a Nigerian university.
                 </p>
               </div>
             </Reveal>
@@ -139,7 +137,7 @@ export default function About() {
       {/* TIMELINE */}
       <section className="section section--sand">
         <div className="wrap">
-          <h2 style={{ maxWidth: '24ch' }}>Five campaigns, most recent first.</h2>
+          <h2 style={{ maxWidth: '24ch' }}>Four campaigns, most recent first.</h2>
           <div className="timeline">
             {timeline.map((item) => {
               const year = item.year.split('·')[0].trim()
@@ -206,25 +204,70 @@ export default function About() {
         </div>
       </section>
 
-      {/* VALUES / HOW WE WORK */}
+      {/* VALUES & HOW WE WORK */}
       <section className="section section--navy">
-        <div className="wrap grid grid--2" style={{ alignItems: 'start' }}>
-          <div>
+        <div className="wrap">
+          <Reveal>
             <h2>What we value.</h2>
-            <ul className="plain" style={{ marginTop: 10 }}>
-              <li>Youth leadership at every level of design and delivery</li>
-              <li>Direct partnership with the communities we work in</li>
-              <li>Honest, plain reporting on what each campaign actually achieved</li>
-              <li>Bridging everyday careers, like engineering, with sustainability</li>
-            </ul>
+          </Reveal>
+          <div className="val-grid" style={{ marginTop: 24 }}>
+            <Reveal delay={0}>
+              <div className="val">
+                <img src="/assets/icons3d/rocket.png" alt="" />
+                <h4>Youth leadership</h4>
+                <p>At every level of design and delivery.</p>
+              </div>
+            </Reveal>
+            <Reveal delay={90}>
+              <div className="val">
+                <img src="/assets/icons3d/heart.png" alt="" />
+                <h4>Direct partnership</h4>
+                <p>With the communities we work in.</p>
+              </div>
+            </Reveal>
+            <Reveal delay={180}>
+              <div className="val">
+                <img src="/assets/icons3d/megaphone.png" alt="" />
+                <h4>Honest reporting</h4>
+                <p>Plain reporting on what each campaign actually achieved, including what didn't go to plan.</p>
+              </div>
+            </Reveal>
+            <Reveal delay={270}>
+              <div className="val">
+                <img src="/assets/icons3d/tools.png" alt="" />
+                <h4>Bridge careers</h4>
+                <p>Bridging everyday careers, like engineering, with sustainability.</p>
+              </div>
+            </Reveal>
           </div>
-          <div>
-            <h2>How we work.</h2>
-            <ul className="plain" style={{ marginTop: 10 }}>
-              <li>Programs are shaped with the people they affect, not delivered top down</li>
-              <li>A lean core team keeps every campaign tightly run and easy to hold accountable</li>
-              <li>Campaigns aim to leave something behind: bins, trees, a lasting connection, not just a one-day event</li>
-            </ul>
+
+          <div style={{ marginTop: 52 }}>
+            <Reveal>
+              <h2>How we work.</h2>
+            </Reveal>
+            <div className="val-grid val-grid--3" style={{ marginTop: 24 }}>
+              <Reveal delay={0}>
+                <div className="val">
+                  <img src="/assets/icons3d/target.png" alt="" />
+                  <h4>Community-shaped</h4>
+                  <p>Programs are shaped with the people they affect, not delivered top down.</p>
+                </div>
+              </Reveal>
+              <Reveal delay={100}>
+                <div className="val">
+                  <img src="/assets/icons3d/bulb.png" alt="" />
+                  <h4>Lean &amp; accountable</h4>
+                  <p>A lean core team keeps every campaign tightly run and easy to hold accountable.</p>
+                </div>
+              </Reveal>
+              <Reveal delay={200}>
+                <div className="val">
+                  <img src="/assets/icons3d/sun.png" alt="" />
+                  <h4>Lasting impact</h4>
+                  <p>Campaigns aim to leave something behind: bins, trees, and lasting connections, not just a one-day event.</p>
+                </div>
+              </Reveal>
+            </div>
           </div>
         </div>
       </section>
@@ -234,7 +277,7 @@ export default function About() {
         <div className="wrap">
           <div className="cta-block">
             <h2>
-              Working on ocean, climate, or youth leadership? Let's talk.
+              Working on sustainability, clean energy, or youth-led impact? Let's talk.
             </h2>
             <p>If there's common ground with what we do, we'd love to hear from you.</p>
             <Link to="/contact" className="btn btn--accent">

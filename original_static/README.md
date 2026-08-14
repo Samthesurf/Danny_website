@@ -5,7 +5,7 @@ Plain HTML and CSS, no build tools, no dependencies except Google Fonts (loaded 
 ## Pages
 
 * index.html, about.html, programs.html, gallery.html, team.html, partners.html, contact.html
-* One detail page per campaign: program-abuadmun.html, program-earth-summit.html, program-hydrogen-horizons.html, program-youth-vs-climate-change.html, program-ocean-conservation.html
+* One detail page per campaign: program-earth-summit.html, program-hydrogen-horizons.html, program-youth-vs-climate-change.html, program-ocean-conservation.html
 * One bio page per core team member: team-daniel-olajuyigbe.html, team-ebenezer-tomoye.html, team-precious-ojo.html, team-gloria-ogundipe.html, team-ayooluwa-sunmonu.html, team-ayokunle-durojaiye.html, team-mariah-kosuowei.html
 * style.css holds all design tokens (colors, type, spacing) and shared components
 
