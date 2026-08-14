@@ -154,9 +154,9 @@ export default function Home() {
               <div className="card">
                 <h3>Youth-led, start to finish</h3>
                 <p>
-                  Every campaign is designed and run by young people, not handed down by adults on
-                  their behalf. DACTION's team plans, fundraises, delivers, and answers for the
-                  results.
+                  Every campaign is designed and led by young people themselves, from the first idea
+                  through to delivery. DACTION's team plans, fundraises, delivers, and answers for
+                  the results.
                 </p>
               </div>
             </Reveal>

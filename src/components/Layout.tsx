@@ -211,6 +211,13 @@ function SiteFooter() {
           <span>&copy; 2026 DACTION Initiative. All rights reserved.</span>
           <span>Youth-led environmental action, from Lekki, Lagos, Nigeria.</span>
         </div>
+
+        <div className="footer-credit">
+          Made with <span aria-hidden="true">&hearts;</span> by{' '}
+          <a href="https://samuelsurf.me" target="_blank" rel="noopener noreferrer">
+            Samuel Surf
+          </a>
+        </div>
       </div>
     </footer>
   );

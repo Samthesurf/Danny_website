@@ -669,6 +669,13 @@ a.back-link--navy:hover{color:#fff;}
   font-family:'Inter', sans-serif; font-size:0.78rem; color:#7E93A8;
   display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;
 }
+.footer-credit{
+  margin-top:12px; padding-top:0;
+  font-family:'Inter', sans-serif; font-size:0.78rem; color:#7E93A8;
+  text-align:center;
+}
+.footer-credit a{color:#A9C2DC; text-decoration:none;}
+.footer-credit a:hover{color:#fff;}
 
 /* ---------- reveal-on-scroll ---------- */
 .reveal{

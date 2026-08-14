@@ -307,6 +307,8 @@ export interface TeamMember {
   avatar?: string
   /** Secondary "at work" photo path. */
   work?: string
+  /** Number of bio paragraphs to render before the inline work photo (defaults to the midpoint). */
+  workAfter?: number
 }
 
 export const teamMembers: TeamMember[] = [
@@ -318,11 +320,12 @@ export const teamMembers: TeamMember[] = [
       'Leads strategic direction, national and international partnerships, and overall organizational growth.',
     headshot: '/assets/img/team/daniel-olajuyigbe/headshot.jpg',
     work: '/assets/img/team/daniel-olajuyigbe/work.jpg',
+    workAfter: 5,
     bio: [
       'Daniel Olajuyigbe is a First Class graduate in Aeronautical and Astronautical Engineering from Afe Babalola University and the founder of DACTION Initiative, an environmental nonprofit he built as a teenager and has since grown into a five-time internationally funded organization.',
       'His engineering training centers on combustion and energy systems. His undergraduate thesis focused on the design and computational evaluation of a low-NOx hydrogen micro-injector for small gas turbine combustion, backed by CFD simulations in ANSYS Fluent studying hydrogen-air mixing and emissions performance. He completed industrial placements at Aero Contractors Company of Nigeria and the Nigerian Air Force, gaining hands-on exposure to propulsion, hydraulics, and avionics within safety-critical environments. He now applies that foundation across aviation, energy systems, and consulting.',
       "Daniel's path into environmental leadership began early. At fifteen he won the Turtle Prize from Mundus Maris Science and Arts for Sustainability in Belgium, and the following year took Silver in the Queen's Commonwealth Essay Competition. He wrote for the ThinkOcean Blog and served as a Commonwealth Correspondent for YourCommonwealth, before being selected in 2021 to the Captain Planet Foundation's Planeteer Alliance Design Squad, an international team assembled to help build and launch it. He steered the team's work on a formal proposal for the Alliance's governance structure, a role that later opened the door to his current seat on the Foundation's Planeteer Alliance Wisdom Council, advising on program strategy for its global network.",
-      'Since founding DACTION in 2022, Daniel has led it to five internationally competitive grants worth over $4,000 from the Captain Planet Foundation and ThinkOcean, built volunteer teams for each campaign, and formed a multi-year partnership with RESWAYE. He also founded ThinkOcean\'s first Nigerian chapter and served as National Coordinator.',
+      'Since founding DACTION in 2022, Daniel has led it to five internationally competitive grants worth over $4,000 from the Captain Planet Foundation and ThinkOcean, built volunteer teams for each campaign, and formed a multi-year partnership with RESWAYE, and helped secure university approval to establish ABUADMUN, which DACTION now backs with a three-year funding commitment. He also founded ThinkOcean\'s first Nigerian chapter and served as National Coordinator.',
       'On campus, Daniel served as General Secretary of the Nigerian Universities Engineering Students\u2019 Association (NUESA), ABUAD chapter, chairing the Academic and Financial Committees and managing budgets, sponsorship, and technical programming for over 1,500 engineering students, work recognized with an Award of Service. Before that, as General Secretary of ABUAD Salt Valley Associates, he coordinated executive communications and delivered flagship student events. He also served as Meto\'s Outreach Representative for Nigeria on the Rise Scholarship Program, mentoring over 300 students across 100+ schools.',
       "What genuinely drives Daniel is the belief that sustainability has to be built into how careers and businesses operate, not treated as a side project. He's focused on how businesses design real sustainability and ESG strategy, how existing oil and gas operations can cut waste and emissions during the transition to cleaner alternatives, and how that work can go hand in hand with developing renewables, hydrogen especially.",
       "Just as much, he's drawn to the process behind it all: spotting real gaps, designing solutions, and bringing together young people capable of building them.",
