@@ -1,6 +1,19 @@
-import { CONTACT } from '../data/site'
 import { useEffect, useState, type FormEvent } from 'react'
 import { Reveal } from '../components/Reveal'
+import { CONTACT } from '../data/site'
+
+/** Web3Forms access key — get a free one at https://web3forms.com */
+const WEB3FORMS_KEY = import.meta.env.VITE_WEB3FORMS_KEY || 'ddb1b410-44b0-4734-986d-a78ec7c93c38'
+
+const SUBJECT_MAP: Record<string, string> = {
+  general: 'General Inquiry',
+  partnership: 'Partnership / Institutional Collaboration',
+  funding: 'Grant / Funding Inquiry',
+  volunteer: 'Volunteering / Joining the Team',
+  speaking: 'Speaking / Event Invitation',
+}
+
+type FormStatus = 'idle' | 'sending' | 'sent' | 'error'
 
 export default function Contact() {
   useEffect(() => {
@@ -14,30 +27,39 @@ export default function Contact() {
     subject: 'general',
     message: '',
   })
-  const [submitted, setSubmitted] = useState(false)
+  const [status, setStatus] = useState<FormStatus>('idle')
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault()
+    setStatus('sending')
 
-    const subjectMap: Record<string, string> = {
-      general: 'General Inquiry',
-      partnership: 'Partnership / Institutional Collaboration',
-      funding: 'Grant / Funding Inquiry',
-      volunteer: 'Volunteering / Joining the Team',
-      speaking: 'Speaking / Event Invitation',
+    const topic = SUBJECT_MAP[formData.subject] || formData.subject
+
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_KEY,
+          subject: `[DACTION Website] ${topic} from ${formData.name}`,
+          name: formData.name,
+          email: formData.email,
+          organization: formData.organization || 'N/A',
+          topic,
+          message: formData.message,
+        }),
+      })
+
+      if (!res.ok) throw new Error(`Web3Forms returned ${res.status}`)
+      setStatus('sent')
+      setFormData({ name: '', email: '', organization: '', subject: 'general', message: '' })
+    } catch {
+      setStatus('error')
     }
-
-    const emailSubject = encodeURIComponent(
-      `[DACTION Website] ${subjectMap[formData.subject] || 'Inquiry'} from ${formData.name}`
-    )
-    const emailBody = encodeURIComponent(
-      `Name: ${formData.name}\nEmail: ${formData.email}\nOrganization / Affiliation: ${formData.organization || 'N/A'}\nTopic: ${subjectMap[formData.subject] || formData.subject}\n\nMessage:\n${formData.message}\n`
-    )
-
-    // Open user's default email client prefilled to the official organization inbox
-    window.location.href = `mailto:${CONTACT.orgEmail}?subject=${emailSubject}&body=${emailBody}`
-    setSubmitted(true)
   }
+
+  const set = (field: string, value: string) =>
+    setFormData((prev) => ({ ...prev, [field]: value }))
 
   return (
     <>
@@ -62,14 +84,24 @@ export default function Contact() {
                 Fill in the details below and we will get back to you directly via email.
               </p>
 
-              {submitted ? (
+              {status === 'sent' ? (
                 <div className="form-success">
-                  <h4>Opening your email client...</h4>
+                  <h4>Message sent!</h4>
                   <p>
-                    Your message has been formatted. If your email application did not open automatically,
-                    you can email us directly at{' '}
-                    <a href={`mailto:${CONTACT.orgEmail}`}><strong>{CONTACT.orgEmail}</strong></a>.
+                    Thanks for reaching out. We'll review your message and get back to you
+                    as soon as possible. In the meantime, feel free to follow{' '}
+                    <a href={CONTACT.instagram} target="_blank" rel="noopener">
+                      @daction_initiative on Instagram
+                    </a>{' '}
+                    for updates.
                   </p>
+                  <button
+                    className="btn btn--ghost"
+                    style={{ marginTop: 12, cursor: 'pointer' }}
+                    onClick={() => setStatus('idle')}
+                  >
+                    Send another message &rarr;
+                  </button>
                 </div>
               ) : (
                 <form className="contact-form" onSubmit={handleSubmit}>
@@ -85,7 +117,7 @@ export default function Contact() {
                         placeholder="e.g. Amina Bello"
                         className="form-input"
                         value={formData.name}
-                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                        onChange={(e) => set('name', e.target.value)}
                       />
                     </div>
 
@@ -100,7 +132,7 @@ export default function Contact() {
                         placeholder="you@domain.com"
                         className="form-input"
                         value={formData.email}
-                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                        onChange={(e) => set('email', e.target.value)}
                       />
                     </div>
                   </div>
@@ -116,7 +148,7 @@ export default function Contact() {
                         placeholder="e.g. University / NGO / Company"
                         className="form-input"
                         value={formData.organization}
-                        onChange={(e) => setFormData({ ...formData, organization: e.target.value })}
+                        onChange={(e) => set('organization', e.target.value)}
                       />
                     </div>
 
@@ -128,7 +160,7 @@ export default function Contact() {
                         id="contact-subject"
                         className="form-select"
                         value={formData.subject}
-                        onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
+                        onChange={(e) => set('subject', e.target.value)}
                       >
                         <option value="general">General Inquiry</option>
                         <option value="partnership">Partnership &amp; Collaboration</option>
@@ -150,16 +182,23 @@ export default function Contact() {
                       placeholder="How can we help or collaborate?"
                       className="form-textarea"
                       value={formData.message}
-                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                      onChange={(e) => set('message', e.target.value)}
                     />
                   </div>
 
                   <div className="form-actions">
-                    <button type="submit" className="btn btn--accent" style={{ cursor: 'pointer' }}>
-                      Send Message &rarr;
+                    <button
+                      type="submit"
+                      className="btn btn--accent"
+                      style={{ cursor: 'pointer', minWidth: 180 }}
+                      disabled={status === 'sending'}
+                    >
+                      {status === 'sending' ? 'Sending...' : 'Send Message'}
                     </button>
                     <p className="form-privacy-note">
-                      Directly reaches our leadership inbox.
+                      {status === 'error'
+                        ? 'Something went wrong. Please try again or email us directly.'
+                        : 'Delivered directly to our inbox.'}
                     </p>
                   </div>
                 </form>

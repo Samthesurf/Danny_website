@@ -79,7 +79,7 @@ const programsBase: Program[] = [
     ],
     tags: [
       'Funded by Captain Planet Foundation',
-      'Community co-facilitation with youth waste workers',
+      'Hosted under the Planeteer Alliance',
     ],
   },
   {

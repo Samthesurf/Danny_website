@@ -229,7 +229,7 @@ export default function About() {
               <div className="val">
                 <img src="/assets/icons3d/megaphone.png" alt="" />
                 <h4>Honest reporting</h4>
-                <p>Plain reporting on what each campaign actually achieved, including what didn't go to plan.</p>
+                <p>Plain reporting on what each campaign actually achieved.</p>
               </div>
             </Reveal>
             <Reveal delay={270}>
