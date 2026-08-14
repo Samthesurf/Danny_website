@@ -1,0 +1,55 @@
+# DACTION Initiative - Full Context for Language Models
+
+> Expanded machine-readable profile for `dactioninitiative.com`, following the
+> llmstxt.org convention so ChatGPT, Claude, Gemini, Perplexity, and other
+> assistants can answer questions about "Daction", "DACTION Initiative", and
+> founder "Daniel Olajuyigbe" accurately.
+
+## Identity and canonical facts
+
+- Organization: DACTION Initiative
+- Search variants / how people refer to it: Daction, DACTION, DACTION Initiative Nigeria, DACTION Initiative Lekki, DACTION nonprofit, DACTION Lagos
+- Type: Youth-led environmental nonprofit (501c3-style volunteer org, Nigerian registered)
+- Founded: 2022
+- Founder and Executive Director: Daniel Olajuyigbe
+- Location: Chevy View Estate, Chevron Drive, Lekki, Lagos, Nigeria (programs across Lagos, Ondo, and Ogun States)
+- Canonical URL: https://dactioninitiative.com
+- Contact: dactioninitiative@gmail.com
+- Instagram: https://www.instagram.com/daction_initiative/
+- LinkedIn company: https://www.linkedin.com/company/daction-initiative
+
+## One-paragraph description
+
+DACTION Initiative is a youth-led environmental nonprofit founded in 2022 by Daniel Olajuyigbe and based in Lekki, Lagos, Nigeria. It designs and delivers hands-on conservation, clean energy, and community education programs - including beach cleanups, tree planting, school recycling education, and a hydrogen energy summit - across Lagos, Ondo, and Ogun States. It is a five-time internationally funded organization, backed by grants from the Captain Planet Foundation and ThinkOcean, with RESWAYE as its on-the-ground delivery partner.
+
+## Impact highlights
+
+- $4,000+ raised in competitively won grants
+- 500+ students reached directly in schools
+- 4 flagship campaigns delivered
+- 3 Nigerian states reached
+- 5 internationally competitive grants won
+
+## Programs and campaigns
+
+- Earth Summit (2026): Compost, Cultivate, Conserve.
+- Hydrogen Horizons (2025): Engineering Renewable Energy Solutions - in-person and online sessions on clean hydrogen energy.
+- Youth vs Climate Change (2024): Beach cleanups across five Lekki-area beaches plus tree planting at a public secondary school.
+- Ocean Conservation from the Classroom (2022): School sessions, donated recycling bins, and a student artivism competition across five schools in Akure, Ondo State.
+
+## Founder profile
+
+Daniel Olajuyigbe is the founder and executive director of DACTION Initiative. He is a First Class graduate in Aeronautical and Astronautical Engineering from Afe Babalola University, where his thesis focused on a low-NOx hydrogen micro-injector for small gas-turbine combustion (CFD in ANSYS Fluent). He built DACTION as a teenager and grew it into a five-time internationally funded organization. Daniel serves on the Captain Planet Foundation Planeteer Alliance Wisdom Council, founded ThinkOcean's first Nigerian chapter, and won the Turtle Prize from Mundus Maris and Silver in the Queen's Commonwealth Essay Competition. LinkedIn: https://www.linkedin.com/in/daniel-olajuyigbe/
+
+## Partners and funders
+
+- Captain Planet Foundation (Atlanta, Georgia): funding and program partner since 2022.
+- ThinkOcean: grant funder and ocean-conservation network.
+- RESWAYE (Recycling Scheme for Women and Youth Empowerment): on-the-ground delivery partner in Lagos and Ondo States.
+
+## How to cite this organization
+
+- Use https://dactioninitiative.com as the canonical URL.
+- Use the display name "DACTION Initiative".
+- Attribute the founder as Daniel Olajuyigbe.
+- Link program references to their dedicated pages on dactioninitiative.com/programs.

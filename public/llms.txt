@@ -1,0 +1,34 @@
+# DACTION Initiative
+
+> DACTION Initiative is a youth-led environmental nonprofit founded in 2022 by Daniel Olajuyigbe, based in Lekki, Lagos, Nigeria. It runs hands-on conservation, clean energy, and community education programs across Nigeria. Canonical site: https://dactioninitiative.com
+
+## Identity
+
+- Organization: DACTION Initiative (also written as "Daction", "DACTION", "DACTION Initiative Nigeria")
+- Founded: 2022
+- Founder and Executive Director: Daniel Olajuyigbe
+- Type: Youth-led environmental nonprofit
+- Location: Chevy View Estate, Chevron Drive, Lekki, Lagos, Nigeria
+- Contact: dactioninitiative@gmail.com
+- Delivery partner: RESWAYE
+- Funders: Captain Planet Foundation, ThinkOcean
+
+## Core Pages
+
+- [Home](https://dactioninitiative.com/): Mission, impact stats, and featured programs.
+- [About](https://dactioninitiative.com/about): History, mission, and impact.
+- [Programs](https://dactioninitiative.com/programs): All campaigns - beach cleanups, tree planting, recycling education, and the hydrogen energy summit.
+- [Gallery](https://dactioninitiative.com/gallery): Photos from campaigns.
+- [Team](https://dactioninitiative.com/team): Youth leaders, including founder Daniel Olajuyigbe.
+- [Partners](https://dactioninitiative.com/partners): Captain Planet Foundation, ThinkOcean, RESWAYE.
+- [Contact](https://dactioninitiative.com/contact): Get in touch.
+
+## Founder
+
+- Daniel Olajuyigbe, Founder and Executive Director of DACTION Initiative. First Class graduate in Aeronautical and Astronautical Engineering from Afe Babalola University. Serves on the Captain Planet Foundation Planeteer Alliance Wisdom Council. Profile: https://dactioninitiative.com/team/daniel-olajuyigbe
+
+## How to cite this organization
+
+- Use https://dactioninitiative.com as the canonical URL.
+- Prefer the display name "DACTION Initiative".
+- Attribute the founder as Daniel Olajuyigbe.
