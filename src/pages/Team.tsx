@@ -41,9 +41,6 @@ export default function Team() {
                 <Placeholder variant="portrait" label="Photo coming soon" />
               )}
               <div>
-                <span className="eyebrow" style={{ marginBottom: 4 }}>
-                  Founder
-                </span>
                 <h2 style={{ fontSize: '2.1rem', marginBottom: 2 }}>{founder.name}</h2>
                 <span className="role role--gold">{founder.role}</span>
                 <p style={{ maxWidth: '56ch' }}>{founder.blurb}</p>

@@ -683,9 +683,13 @@ a.back-link--navy:hover{color:#fff;}
 }
 /* Role label used on team cards, founder feature, and bio pages */
 .role{
-  font-family:'Inter', sans-serif; font-size:0.88rem; font-weight:600;
+  font-family:'Inter', sans-serif; font-size:1.15rem; font-weight:600;
   color:var(--blue-deep); display:block;
+  margin:12px 0 24px; line-height:1.4;
 }
+/* Role scales with its heading context: bigger under the founder/bio names */
+.founder-feature .role{font-size:1.3rem;}
+.bio-grid .role{font-size:1.3rem;}
 .role--gold{color:var(--accent);}
 
 /* ---------- partner list ---------- */
@@ -850,6 +854,7 @@ a.team-card{
 }
 a.team-card:hover{box-shadow:0 8px 24px rgba(18,42,74,0.1); transform:translateY(-2px); text-decoration:none;}
 a.team-card .placeholder--portrait{margin-bottom:16px;}
+a.team-card h3{margin-bottom:2px;}
 
 /* ---------- bio page ---------- */
 .bio-grid{display:grid; grid-template-columns:0.8fr 1.2fr; gap:40px; align-items:start;}

@@ -42,8 +42,8 @@ export default function MemberBio() {
             )}
           </div>
           <div>
-            <h1 style={{ fontSize: '2rem' }}>{member.name}</h1>
-            <span className="role" style={{ marginTop: 2 }}>
+            <h1 style={{ fontSize: '2rem', marginBottom: 2 }}>{member.name}</h1>
+            <span className="role">
               {member.role}
             </span>
             {member.bio.slice(0, member.workAfter ?? Math.ceil(member.bio.length / 2)).map((paragraph, i) => (
