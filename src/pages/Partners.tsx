@@ -6,27 +6,27 @@ const partnerWays = [
   {
     icon: '/assets/icons3d/money-bag.png',
     title: 'Fund a campaign',
-    text: 'Back a specific DACTION campaign from proposal to report. You set the outcomes you care about, we design around them, and you get an honest account of what the money achieved.',
+    text: 'Back a specific DACTION campaign, start to finish. We design every program around the issues we already care about, ocean conservation, renewable energy, sustainability in careers, then show funders exactly what their support made possible.',
   },
   {
     icon: '/assets/icons3d/puzzle.png',
     title: 'Deliver together',
-    text: 'Co-facilitation is how our best programs ran. Your team brings the expertise, ours brings the young people and the local grounding, and the campaign is built jointly rather than handed over.',
+    text: 'We run our campaigns ourselves, but the strongest ones grow even further with a partner alongside us. Bring your team’s expertise into a campaign, and help us reach further than either of us would alone.',
   },
   {
     icon: '/assets/icons3d/location.png',
     title: 'Host at your institution',
-    text: 'Schools and universities open their doors, put students in the room, and shape what the program covers. Every DACTION campaign to date has run inside a partner institution.',
+    text: 'Schools and universities give our campaigns a place to land: a room, an audience already gathered, and often exactly the students we’re trying to reach. Most DACTION campaigns to date have run inside a partner venue, built around what we already care about and shaped to fit the students in the room.',
   },
   {
     icon: '/assets/icons3d/mic.png',
     title: 'Send a speaker',
-    text: 'Researchers, executives, and practitioners who can talk plainly about energy, environment, or careers. One seat at a session like Hydrogen Horizons can redirect how a student plans their whole path.',
+    text: 'Researchers, executives, and practitioners who can talk plainly about energy, environment, or careers. One seat at a session like Hydrogen Horizons puts a student directly in front of someone doing the work they’re curious about, and sometimes that’s the conversation that helps them choose their path with real clarity.',
   },
   {
     icon: '/assets/icons3d/bag.png',
     title: 'Cover the logistics',
-    text: 'Transport, venue, materials, refreshments. In-kind support has carried entire campaign days, and it is often the difference between a plan on paper and a program that runs.',
+    text: 'Transport, venue support, and physical materials form the foundation of every campaign. In-kind support steps in to secure these essentials directly, meaning we can put all of our focus straight into the field.',
   },
 ]
 
