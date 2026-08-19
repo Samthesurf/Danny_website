@@ -47,6 +47,7 @@ export default function Partners() {
         </div>
       </section>
 
+      {/*
       <section className="section--tight">
         <div className="wrap">
           <div className="bio-grid" style={{ marginTop: 14, alignItems: 'center' }}>
@@ -70,6 +71,7 @@ export default function Partners() {
           </div>
         </div>
       </section>
+      */}
 
       <section className="section--tight">
         <div className="wrap">
