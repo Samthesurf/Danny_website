@@ -109,8 +109,10 @@ export default function About() {
                   From there, DACTION kept pursuing whichever opportunity fit those three interests
                   best. Coastal cleanups and reforestation in Lekki followed in 2024. An energy
                   dialogue on hydrogen's place in Nigeria's future came in 2025, pulling in an NNPC
-                  executive and international researchers from Germany and Canada. Now, DACTION is
-                  preparing a soil and food-systems summit at a Nigerian university.
+                  executive and international researchers from Germany and Canada. The Earth Summit
+                  followed in September 2026, bringing soil health and food systems to 81 students
+                  at TELNET International Schools in Akure, with a live gardening demonstration and
+                  a quiz competition.
                 </p>
               </div>
             </Reveal>
@@ -166,7 +168,7 @@ export default function About() {
                 DACTION's work sits inside three consistent interests: ocean conservation,
                 renewable energy, and sustainability in careers and business. Every campaign we've
                 run traces back to one of those three, whether that's a classroom conservation
-                drive, a hydrogen energy meetup, or an upcoming soil health summit. We go after the
+                drive, a hydrogen energy meetup, or a soil health summit at a secondary school in Akure. We go after the
                 grants and opportunities that fit those interests, and that's what actually decides
                 what we work on each year, not a lack of focus.
               </p>
