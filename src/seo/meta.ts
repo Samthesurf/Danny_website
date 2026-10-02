@@ -48,7 +48,7 @@ const memberBySlug = new Map(teamMembers.map((m) => [m.slug, m]))
 export function getHead(path: string): RouteHead {
   const clean = path === '/' ? '/' : path.replace(/\/+$/, '') || '/'
   const suffix = ` | ${SITE.name}`
-  const canonicalPath = clean === '/' ? '/' : `${clean}/`
+  const canonicalPath = clean === '/' ? '/' : clean
 
   // program detail
   if (clean.startsWith('/programs/')) {

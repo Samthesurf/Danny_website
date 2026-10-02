@@ -142,7 +142,7 @@ async function main() {
 </html>
 `
       const outFile =
-        route.path === '/' ? 'index.html' : join(route.path.replace(/^\//, ''), 'index.html')
+        route.path === '/' ? 'index.html' : `${route.path.replace(/^\//, '')}.html`
       const outPath = join(DIST, outFile)
       mkdirSync(dirname(outPath), { recursive: true })
       writeFileSync(outPath, html)
@@ -154,7 +154,7 @@ async function main() {
     const urlTags = routes
       .map(
         (r) => `  <url>
-    <loc>${r.path === '/' ? abs('/') : abs(r.path) + '/'}</loc>
+    <loc>${abs(r.path)}</loc>
     <lastmod>${TODAY.slice(0, 10)}</lastmod>
     <changefreq>${r.freq}</changefreq>
     <priority>${r.priority.toFixed(1)}</priority>
