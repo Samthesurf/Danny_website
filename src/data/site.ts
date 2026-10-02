@@ -56,31 +56,61 @@ const programsBase: Program[] = [
   {
     slug: 'earth-summit',
     id: 'earth-summit',
-    tag: '2026 · Upcoming',
+    tag: 'September 2026 · Completed',
     title: 'DACTION Earth Summit: Compost, Cultivate, Conserve',
     blurb:
-      'A full-day summit on soil health, composting, and sustainable food systems at a federal university of technology, co-facilitated with informal youth waste workers.',
-    status: 'upcoming',
-    statusLabel: 'Upcoming, September 2026',
-    location: 'Federal University of Technology Akure (FUTA), Ondo State',
-    focus: 'Soil health, composting, sustainable food systems',
+      'An interactive summit for 81 secondary school students at TELNET International Schools, Akure, on soil health, composting, and sustainable food systems, featuring a live gardening demonstration and a quiz competition with prizes.',
+    status: 'done',
+    statusLabel: 'Completed, September 2026',
+    location: 'TELNET International Schools, Akure, Ondo State',
+    focus: 'Sustainable farming, food systems, youth environmental education',
     image: '/assets/img/earth-summit/hero.jpg',
-    logo: '/assets/logos/earth-summit.png',
     heroFit: true,
-    storyHeadline: 'Turning everyday waste into a solution communities can use.',
+    storyHeadline: 'Learning about the ground beneath our feet, one question at a time.',
     story: [
-      'Across Akure, homes, markets, and university dining halls generate large volumes of organic waste every day, while nearby farming communities struggle with declining soil fertility from erosion and nutrient loss. The two problems are directly connected: waste that could restore soil is instead treated as trash.',
-      'The Earth Summit brings roughly 100 students and young people together for a full day of learning and hands on demonstration rather than a standard lecture format: sessions on soil health and food systems, a community dialogue panel, live composting and urban gardening demonstrations, and small group work where participants commit to one practical action they\u2019ll take within a month.',
-      "A defining feature of the Summit is who's in the room. Alongside students, informal youth waste workers from the Akure community join as co-facilitators, sharing hands on experience managing organic waste that most academic settings never make space for. It's a deliberate attempt to put community knowledge and classroom knowledge on equal footing.",
+      'DACTION took the Summit to TELNET International Schools in Akure and delivered a program built entirely around the EARTH element to 81 students, with 4 teachers joining in: how food, waste, and soil all connect, and what young people can actually do about it. The day opened with an interactive keynote tying the topic to the Sustainable Development Goals on zero hunger and life on land, walking through the problems facing food systems and land, trash, unsustainable farming, food waste, deforestation, and the practical solutions to each. Students came up to answer questions as the session went.',
+      "From there, the Summit moved into a walkthrough on four printed flyers covering the soil crisis and a youth action challenge, each carrying a QR code so interested students could join Planeteer Alliance's PlaneteerHQ when they are home. The centerpiece of the day was a live gardening demonstration by Pius Odeh, a young student farmer who walked students through growing yam, plantain, maize, okra, and two vegetable species without chemical fertilizer, covering planting technique, ridges, erosion control, and matching soil to crop, split across four groups so everyone could get close to the materials.",
+      "The day closed with a quiz and game session, six student teams competing on what they'd learned, with prizes awarded the top performing students, followed by an award of participation presented to the school for hosting, then refreshments, and group photos.",
     ],
     stats: [
-      { num: '100', label: 'students and youth targeted' },
-      { num: '40', label: 'participants aimed to start home composting within a month' },
+      { num: '85', label: 'attendees' },
+      { num: '6', label: 'crops demonstrated in the gardening session' },
+      { num: '96', label: 'educational flyers distributed with PlaneteerHQ QR codes' },
     ],
     tags: [
       'Funded by Captain Planet Foundation',
       'Hosted under the Planeteer Alliance',
     ],
+    people: {
+      heading: 'Who ran the campaign',
+      people: [
+        {
+          name: 'Daniel Olajuyigbe',
+          role: 'Team Lead',
+          headshot: '/assets/img/earth-summit/team/daniel-olajuyigbe.jpg',
+        },
+        {
+          name: 'Ayokunle Durojaiye',
+          role: 'Team member',
+          headshot: '/assets/img/earth-summit/team/ayokunle-durojaiye.jpg',
+        },
+        {
+          name: 'Odeh Pius',
+          role: 'Team member',
+          headshot: '/assets/img/earth-summit/team/odeh-pius.jpg',
+        },
+        {
+          name: 'David Olajuyigbe',
+          role: 'Team member',
+          headshot: '/assets/img/earth-summit/team/david-olajuyigbe.jpg',
+        },
+        {
+          name: 'Daniel Bassey John',
+          role: 'Team member',
+          headshot: '/assets/img/earth-summit/team/daniel-bassey-john.jpg',
+        },
+      ],
+    },
   },
   {
     slug: 'hydrogen-horizons',
@@ -487,7 +517,7 @@ export const partners: Partner[] = [
 ]
 
 export interface GalleryMoment {
-  title: string
+  title?: string
   images?: string[]
   /** Shown when a moment has no photos yet (e.g. upcoming events). */
   note?: string
@@ -505,14 +535,10 @@ export const gallerySections: GallerySection[] = [
     title: 'DACTION Earth Summit, 2026',
     moments: [
       {
-        title: 'Summit promotions',
-        images: [
-          '/assets/img/earth-summit/poster-01.jpg',
-          '/assets/img/earth-summit/poster-02.jpg',
-          '/assets/img/earth-summit/poster-03.jpg',
-          '/assets/img/earth-summit/poster-04.jpg',
-        ],
-        note: 'This summit takes place in September 2026. More photos will be added here once the event has happened.',
+        images: Array.from(
+          { length: 7 },
+          (_, i) => `/assets/img/earth-summit/event-${String(i + 1).padStart(2, '0')}.jpg`
+        ),
       },
     ],
   },
@@ -597,7 +623,7 @@ export const timeline: TimelineItem[] = [
     year: '2026 · Soil systems',
     title: 'DACTION Earth Summit: Compost, Cultivate, Conserve',
     text:
-      'A full-day summit on soil health, composting, and sustainable food systems at the Federal University of Technology Akure, bringing informal youth waste workers in as co-facilitators alongside students.',
+      'An interactive summit for 81 secondary school students at TELNET International Schools, Akure, on soil health, composting, and sustainable food systems, featuring a live gardening demonstration and a quiz competition with prizes.',
   },
   {
     year: '2025 · Clean energy',
@@ -621,7 +647,7 @@ export const timeline: TimelineItem[] = [
 
 export const impactStats: { num: string; label: string }[] = [
   { num: '$4,000+', label: 'in competitively won grants' },
-  { num: '500+', label: 'students reached directly' },
+  { num: '675+', label: 'people reached directly' },
   { num: '4', label: 'flagship campaigns delivered' },
   { num: '2', label: 'Nigerian states reached' },
 ]

@@ -21,17 +21,17 @@ export default function Gallery() {
     section.moments.flatMap((moment) =>
       (moment.images || []).map((src) => ({
         src,
-        title: moment.title,
+        title: moment.title ?? '',
         sectionTitle: section.title,
       }))
     )
   )
 
-  const openImage = (src: string, momentTitle: string, sectionTitle: string) => {
+  const openImage = (src: string, momentTitle: string | undefined, sectionTitle: string) => {
     const idx = allImages.findIndex((img) => img.src === src)
     setActiveImage({
       src,
-      title: momentTitle,
+      title: momentTitle ?? '',
       sectionTitle,
       index: idx >= 0 ? idx : 0,
       total: allImages.length,
@@ -105,9 +105,9 @@ export default function Gallery() {
           {gallerySections.map((section) => (
             <div className="gallery-section" id={section.id} key={section.title}>
               <h2 style={{ fontSize: '1.4rem' }}>{section.title}</h2>
-              {section.moments.map((moment) => (
-                <div className="gallery-sub" key={moment.title}>
-                  <h3>{moment.title}</h3>
+              {section.moments.map((moment, mi) => (
+                <div className="gallery-sub" key={moment.title ?? `${section.id}-moment-${mi}`}>
+                  {moment.title ? <h3>{moment.title}</h3> : null}
                   {moment.images && moment.images.length > 0 ? (
                     <div className="gallery-grid">
                       {moment.images.map((src) => (
@@ -116,11 +116,11 @@ export default function Gallery() {
                           type="button"
                           className="gallery-thumb-btn"
                           onClick={() => openImage(src, moment.title, section.title)}
-                          aria-label={`View full image: ${section.title} - ${moment.title}`}
+                          aria-label={`View full image: ${section.title}${moment.title ? ` - ${moment.title}` : ''}`}
                         >
                           <img
                             src={src}
-                            alt={`${section.title} - ${moment.title}`}
+                            alt={`${section.title}${moment.title ? ` - ${moment.title}` : ''}`}
                             loading="lazy"
                             className="gallery-img"
                           />
@@ -215,7 +215,11 @@ export default function Gallery() {
               className="lightbox-img"
             />
             <div className="lightbox-caption">
-              <span>{activeImage.sectionTitle} &middot; {activeImage.title}</span>
+              <span>
+                {activeImage.title
+                  ? `${activeImage.sectionTitle} \u00b7 ${activeImage.title}`
+                  : activeImage.sectionTitle}
+              </span>
               <span className="lightbox-counter">({activeImage.index + 1} / {activeImage.total})</span>
             </div>
           </div>
