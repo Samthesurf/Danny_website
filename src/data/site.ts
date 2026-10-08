@@ -95,7 +95,7 @@ const programsBase: Program[] = [
           headshot: '/assets/img/earth-summit/team/ayokunle-durojaiye.jpg',
         },
         {
-          name: 'Odeh Pius',
+          name: 'Pius Odeh',
           role: 'Team member',
           headshot: '/assets/img/earth-summit/team/odeh-pius.jpg',
         },
@@ -532,7 +532,7 @@ export interface GallerySection {
 export const gallerySections: GallerySection[] = [
   {
     id: 'gallery-earth-summit',
-    title: 'DACTION Earth Summit, 2026',
+    title: 'DACTION Earth Summit: Compost, Cultivate, Conserve, 2026',
     moments: [
       {
         images: Array.from(
